@@ -2,6 +2,19 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+     MASTER STROKE â€” CONFIGURATION
+     Edit the two values below to connect to your backend.
+     This block must stay at the top of the file.
+     â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+<script>
+  // Your Railway backend URL (e.g. https://masterstroke-backend.up.railway.app)
+  window.MS_API_URL = 'https://masterstroke-backend.up.railway.app';
+
+  // Your Google OAuth Client ID from Google Cloud Console
+  // Looks like: 123456789-abc.apps.googleusercontent.com
+  window.GOOGLE_CLIENT_ID = '272311551918-2gh36ft2s7fbhggerqite5hjbqql62m9.apps.googleusercontent.com';
+</script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <meta name="theme-color" content="#0f1c0f">
 <meta name="mobile-web-app-capable" content="yes">
@@ -219,7 +232,7 @@ html,body{height:100%;overflow:hidden;background:var(--dark);color:var(--text);f
 /* Single full-width camera pane */
 .vid-pane-wrap{position:relative;background:#000;flex-shrink:0;overflow:hidden}
 .vid-pane-wrap video{width:100%;height:100%;object-fit:cover;display:block}
-/* Branding overlay — top of playback video */
+/* Branding overlay â€” top of playback video */
 .vid-brand-bar{position:absolute;top:0;left:0;right:0;background:linear-gradient(180deg,rgba(0,0,0,0.82) 0%,transparent 100%);padding:10px 14px 28px;z-index:3;pointer-events:none}
 .vid-brand-appname{font-family:'Bebas Neue',sans-serif;font-size:1.3rem;letter-spacing:0.2em;color:var(--gold-l);text-shadow:0 1px 8px rgba(0,0,0,0.9)}
 .vid-brand-divider{width:28px;height:1px;background:var(--gold);margin:3px 0}
@@ -438,7 +451,7 @@ html,body{height:100%;overflow:hidden;background:var(--dark);color:var(--text);f
     <div id="home-players-container"></div>
     <div style="height:80px"></div>
   </div>
-  <!-- Camera mode FAB — bottom left -->
+  <!-- Camera mode FAB â€” bottom left -->
   <button onclick="enterCameraClientMode()" title="Camera Mode" style="position:fixed;bottom:calc(var(--safe-bot) + 20px);left:20px;width:56px;height:56px;border-radius:50%;background:rgba(26,74,124,0.85);border:1px solid rgba(100,160,255,0.45);color:#8cf;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 18px rgba(0,0,0,0.45);z-index:50;transition:transform 0.15s" ontouchstart="this.style.transform='scale(0.93)'" ontouchend="this.style.transform='scale(1)'">
     <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#8cf" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
   </button>
@@ -482,7 +495,7 @@ html,body{height:100%;overflow:hidden;background:var(--dark);color:var(--text);f
       </div>
       <div style="display:flex;align-items:center;gap:8px">
         <div id="sc-rec-badge" style="display:none" class="rec-indicator"><div class="rec-dot"></div>REC</div>
-        <button id="speech-toggle" onclick="toggleSpeech()" title="Toggle audio (hold for voice settings)" style="background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:8px;width:34px;height:34px;font-size:1.1rem;cursor:pointer;display:flex;align-items:center;justify-content:center;flex-shrink:0" oncontextmenu="event.preventDefault();openVoiceSettings()">🔊</button>
+        <button id="speech-toggle" onclick="toggleSpeech()" title="Toggle audio (hold for voice settings)" style="background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:8px;width:34px;height:34px;font-size:1.1rem;cursor:pointer;display:flex;align-items:center;justify-content:center;flex-shrink:0" oncontextmenu="event.preventDefault();openVoiceSettings()">ðŸ”Š</button>
         <div class="scoring-total-display">
           <div class="scoring-total-val" id="sc-total">0</div>
           <div class="scoring-total-max">/600</div>
@@ -499,8 +512,8 @@ html,body{height:100%;overflow:hidden;background:var(--dark);color:var(--text);f
       <div class="rec-dot" id="sc-cam-dot" style="display:none"></div>
       Player Front View
     </div>
-    <button class="sc-cam-setup-btn" onclick="openCameraSetup()">⚙ Setup</button>
-    <div class="sc-cam-no-video" id="sc-cam-no-video" style="display:none">📷 Camera unavailable</div>
+    <button class="sc-cam-setup-btn" onclick="openCameraSetup()">âš™ Setup</button>
+    <div class="sc-cam-no-video" id="sc-cam-no-video" style="display:none">ðŸ“· Camera unavailable</div>
   </div>
 
   <div class="shot-info-bar">
@@ -514,7 +527,7 @@ html,body{height:100%;overflow:hidden;background:var(--dark);color:var(--text);f
   <div class="current-ball-bar">
     <div class="ball-badge" id="sc-ball-badge">BALL 1</div>
     <div class="ball-instr">Select score below</div>
-    <button class="reball-btn" onclick="reballCurrent()">↩ Re-ball</button>
+    <button class="reball-btn" onclick="reballCurrent()">â†© Re-ball</button>
   </div>
   <div class="score-grid" id="sc-score-grid">
     <button class="sbtn s0" onclick="recordScore(0)"><span class="pts">0</span><span class="desc">Miss / No play</span></button>
@@ -525,8 +538,8 @@ html,body{height:100%;overflow:hidden;background:var(--dark);color:var(--text);f
     <button class="sbtn s10" onclick="recordScore(10)"><span class="pts">10</span><span class="desc">Perfect shot</span></button>
   </div>
   <div class="scoring-actions">
-    <button class="btn-cancel-session" onclick="confirmCancelSession()">✕ Cancel</button>
-    <button class="btn-finish" onclick="checkFinishSession()">View Results →</button>
+    <button class="btn-cancel-session" onclick="confirmCancelSession()">âœ• Cancel</button>
+    <button class="btn-finish" onclick="checkFinishSession()">View Results â†’</button>
   </div>
 </div>
 
@@ -607,11 +620,11 @@ html,body{height:100%;overflow:hidden;background:var(--dark);color:var(--text);f
       <div class="chart-box" style="height:260px"><canvas id="compRadar" role="img" aria-label="Radar comparison chart"></canvas></div>
     </div>
     <div class="chart-section">
-      <div class="section-title">Scoring worm — session comparison</div>
+      <div class="section-title">Scoring worm â€” session comparison</div>
       <div class="chart-box" style="height:240px;padding:10px 8px 10px 10px"><canvas id="compWorm" role="img" aria-label="Worm chart comparing cumulative scores across two sessions"></canvas></div>
     </div>
     <div class="chart-section">
-      <div class="section-title">Shot histogram — session comparison</div>
+      <div class="section-title">Shot histogram â€” session comparison</div>
       <div class="chart-box" style="height:270px;padding:14px 10px 10px 10px"><canvas id="compHistogram" role="img" aria-label="Grouped histogram comparing shot scores across two sessions"></canvas></div>
     </div>
     <div style="height:16px"></div>
@@ -632,18 +645,18 @@ html,body{height:100%;overflow:hidden;background:var(--dark);color:var(--text);f
     <!-- Focus ring -->
     <div class="cam-focus-ring" id="cam-focus-ring"></div>
     <!-- Tap-to-focus instruction -->
-    <div style="position:absolute;bottom:14px;left:50%;transform:translateX(-50%);font-size:0.65rem;color:rgba(255,255,255,0.45);letter-spacing:0.1em;text-align:center;pointer-events:none">Tap to focus · Pinch to zoom</div>
+    <div style="position:absolute;bottom:14px;left:50%;transform:translateX(-50%);font-size:0.65rem;color:rgba(255,255,255,0.45);letter-spacing:0.1em;text-align:center;pointer-events:none">Tap to focus Â· Pinch to zoom</div>
   </div>
   <div class="cam-controls">
     <div class="cam-ctrl-row">
       <span class="cam-ctrl-label">Zoom</span>
       <input type="range" class="cam-zoom-slider" id="cam-zoom-slider" min="1" max="5" step="0.1" value="1" oninput="updateCameraZoom(this.value)">
-      <span class="cam-zoom-val" id="cam-zoom-val">1.0×</span>
+      <span class="cam-zoom-val" id="cam-zoom-val">1.0Ã—</span>
     </div>
     <div class="cam-btn-row">
-      <button class="cam-toggle-btn" id="cam-grid-btn" onclick="toggleCameraGrid()">⊞ Grid</button>
-      <button class="cam-toggle-btn" id="cam-mirror-btn" onclick="toggleMirror()">⇄ Mirror</button>
-      <button class="cam-start-btn" onclick="confirmCameraAndScore()">▶ Start</button>
+      <button class="cam-toggle-btn" id="cam-grid-btn" onclick="toggleCameraGrid()">âŠž Grid</button>
+      <button class="cam-toggle-btn" id="cam-mirror-btn" onclick="toggleMirror()">â‡„ Mirror</button>
+      <button class="cam-start-btn" onclick="confirmCameraAndScore()">â–¶ Start</button>
     </div>
   </div>
 </div>
@@ -672,13 +685,13 @@ html,body{height:100%;overflow:hidden;background:var(--dark);color:var(--text);f
     <div id="yt-player-wrap" style="position:absolute;inset:0;display:none;background:#000"></div>
     <!-- Upload progress overlay (shown while uploading to YouTube) -->
     <div id="yt-upload-overlay" style="display:none;position:absolute;inset:0;background:rgba(0,0,0,0.85);flex-direction:column;align-items:center;justify-content:center;gap:14px;z-index:5">
-      <div style="font-size:2rem">📤</div>
+      <div style="font-size:2rem">ðŸ“¤</div>
       <div style="font-family:'Bebas Neue',sans-serif;font-size:1.1rem;letter-spacing:0.1em;color:var(--gold-l)">Uploading to YouTube</div>
       <div style="width:200px;height:6px;background:rgba(255,255,255,0.12);border-radius:3px;overflow:hidden">
         <div id="yt-upload-bar" style="width:0%;height:100%;background:linear-gradient(90deg,#ff0000,#cc0000);border-radius:3px;transition:width 0.3s"></div>
       </div>
       <div id="yt-upload-pct" style="font-size:0.78rem;color:var(--muted)">0%</div>
-      <div id="yt-upload-msg" style="font-size:0.72rem;color:var(--muted);text-align:center;max-width:220px">Setting video as Unlisted — only accessible via the app</div>
+      <div id="yt-upload-msg" style="font-size:0.72rem;color:var(--muted);text-align:center;max-width:220px">Setting video as Unlisted â€” only accessible via the app</div>
     </div>
     <!-- Master Stroke branding overlay burned into the top of the video -->
     <div class="vid-brand-bar" id="vid-brand-bar">
@@ -695,7 +708,7 @@ html,body{height:100%;overflow:hidden;background:var(--dark);color:var(--text);f
       <div class="vid-overlay-score" id="vo-score"></div>
     </div>
     <div class="vid-no-video" id="vid-no-video" style="display:none">
-      <div class="nv-icon">🎥</div>
+      <div class="nv-icon">ðŸŽ¥</div>
       <div class="nv-label">No video recorded for this session</div>
     </div>
   </div>
@@ -706,20 +719,20 @@ html,body{height:100%;overflow:hidden;background:var(--dark);color:var(--text);f
       <div class="vid-time-row">
         <span class="vid-time" id="vid-time-cur">0:00</span>
         <div style="display:flex;gap:6px;align-items:center">
-          <button class="vbtn speed-btn" onclick="changeSpeed()" id="vid-speed-btn">1×</button>
-          <button class="vbtn gold" onclick="snapToBall(activeBallIdx)" style="font-size:0.7rem">⟳ Jump</button>
-          <button class="vbtn" id="yt-open-btn" onclick="openOnYouTube()" style="font-size:0.7rem;display:none;background:rgba(180,0,0,0.25);border-color:rgba(255,60,60,0.4);color:#f88">▶ YouTube</button>
-          <button class="vbtn blue" id="vid-dl-btn" onclick="downloadVideo()" style="font-size:0.7rem">⬇ Save</button>
+          <button class="vbtn speed-btn" onclick="changeSpeed()" id="vid-speed-btn">1Ã—</button>
+          <button class="vbtn gold" onclick="snapToBall(activeBallIdx)" style="font-size:0.7rem">âŸ³ Jump</button>
+          <button class="vbtn" id="yt-open-btn" onclick="openOnYouTube()" style="font-size:0.7rem;display:none;background:rgba(180,0,0,0.25);border-color:rgba(255,60,60,0.4);color:#f88">â–¶ YouTube</button>
+          <button class="vbtn blue" id="vid-dl-btn" onclick="downloadVideo()" style="font-size:0.7rem">â¬‡ Save</button>
         </div>
         <span class="vid-time" id="vid-time-dur">0:00</span>
       </div>
       <input type="range" class="vid-scrubber" id="vid-scrubber" min="0" max="1000" value="0">
       <div class="vid-ctrl-btns">
-        <button class="vbtn" onclick="skipVid(-5)" style="font-size:0.8rem">⏪ 5s</button>
-        <button class="vbtn" onclick="skipVid(-1)" style="font-size:0.8rem">‹ 1s</button>
-        <button class="vbtn play-pause" id="vid-play-btn" onclick="togglePlay()">▶</button>
-        <button class="vbtn" onclick="skipVid(1)" style="font-size:0.8rem">1s ›</button>
-        <button class="vbtn" onclick="skipVid(5)" style="font-size:0.8rem">5s ⏩</button>
+        <button class="vbtn" onclick="skipVid(-5)" style="font-size:0.8rem">âª 5s</button>
+        <button class="vbtn" onclick="skipVid(-1)" style="font-size:0.8rem">â€¹ 1s</button>
+        <button class="vbtn play-pause" id="vid-play-btn" onclick="togglePlay()">â–¶</button>
+        <button class="vbtn" onclick="skipVid(1)" style="font-size:0.8rem">1s â€º</button>
+        <button class="vbtn" onclick="skipVid(5)" style="font-size:0.8rem">5s â©</button>
       </div>
     </div>
     <!-- Active ball info strip -->
@@ -730,13 +743,13 @@ html,body{height:100%;overflow:hidden;background:var(--dark);color:var(--text);f
     </div>
   </div>
 
-  <!-- Ball timeline — always visible -->
+  <!-- Ball timeline â€” always visible -->
   <div class="vid-ball-timeline" id="vid-ball-timeline"></div>
 
   <!-- Status / controls shown while recording is live -->
   <div id="vid-recording-status" style="padding:10px 14px calc(var(--safe-bot)+10px);display:flex;gap:8px;align-items:center;flex-shrink:0;background:var(--dark);border-top:1px solid var(--border)">
-    <span id="vid-status-text" style="font-size:0.78rem;color:var(--muted);flex:1">Initialising camera…</span>
-    <button class="btn-cancel-session" onclick="stopRecordingEarly()" id="btn-stop-rec" style="display:none">■ Stop Early</button>
+    <span id="vid-status-text" style="font-size:0.78rem;color:var(--muted);flex:1">Initialising cameraâ€¦</span>
+    <button class="btn-cancel-session" onclick="stopRecordingEarly()" id="btn-stop-rec" style="display:none">â–  Stop Early</button>
   </div>
 </div>
 
@@ -756,18 +769,18 @@ html,body{height:100%;overflow:hidden;background:var(--dark);color:var(--text);f
   </div>
   <div class="scroll-body" style="padding-top:24px">
     <div class="cam-choice-card" onclick="chooseCameraLocal()">
-      <div class="ccc-icon">📱</div>
+      <div class="ccc-icon">ðŸ“±</div>
       <div>
         <div class="ccc-label">This Phone</div>
         <div class="ccc-desc">Use the back camera on this device. Score and record from one phone.</div>
       </div>
     </div>
     <div class="cam-choice-card featured" onclick="chooseRemoteCamera()">
-      <div class="ccc-icon">📡</div>
+      <div class="ccc-icon">ðŸ“¡</div>
       <div>
         <div class="ccc-label">Remote Camera</div>
         <div class="ccc-desc">Link a 2nd Android phone as the dedicated camera. This phone scores; the other phone records and streams HD video.</div>
-        <div class="ccc-badge">Recommended — best quality</div>
+        <div class="ccc-badge">Recommended â€” best quality</div>
       </div>
     </div>
     <div style="padding:0 16px;font-size:0.72rem;color:var(--muted);line-height:1.6">
@@ -776,7 +789,7 @@ html,body{height:100%;overflow:hidden;background:var(--dark);color:var(--text);f
   </div>
 </div>
 
-<!-- QR HOST SCREEN (Phone 1 — shows QR, waits for camera phone) -->
+<!-- QR HOST SCREEN (Phone 1 â€” shows QR, waits for camera phone) -->
 <div class="screen p2p-screen" id="screen-qr-host">
   <div class="p2p-topbar">
     <div style="display:flex;align-items:center;gap:10px">
@@ -792,16 +805,16 @@ html,body{height:100%;overflow:hidden;background:var(--dark);color:var(--text);f
   <div class="qr-host-wrap">
     <div class="qr-session-code" id="qr-session-code">------</div>
     <div id="qr-canvas-wrap"><div id="qr-code-div"></div></div>
-    <div class="qr-instruction">On the 2nd phone, open Master Stroke → tap <strong style="color:var(--text)">Camera Mode</strong> → point it at this QR code</div>
+    <div class="qr-instruction">On the 2nd phone, open Master Stroke â†’ tap <strong style="color:var(--text)">Camera Mode</strong> â†’ point it at this QR code</div>
     <div class="qr-status waiting" id="qr-status">
       <div class="qr-dot pulse waiting" id="qr-dot"></div>
-      <span id="qr-status-text">Waiting for camera phone…</span>
+      <span id="qr-status-text">Waiting for camera phoneâ€¦</span>
     </div>
-    <button id="qr-skip-btn" onclick="skipRemoteCameraAndScore()" style="margin-top:16px;background:transparent;border:1px solid var(--border);border-radius:8px;padding:8px 18px;color:var(--muted);font-size:0.78rem;cursor:pointer;font-family:'DM Sans',sans-serif">Skip — use this phone's camera instead</button>
+    <button id="qr-skip-btn" onclick="skipRemoteCameraAndScore()" style="margin-top:16px;background:transparent;border:1px solid var(--border);border-radius:8px;padding:8px 18px;color:var(--muted);font-size:0.78rem;cursor:pointer;font-family:'DM Sans',sans-serif">Skip â€” use this phone's camera instead</button>
   </div>
 </div>
 
-<!-- CAMERA CLIENT SCREEN (Phone 2 — scanner then streaming) -->
+<!-- CAMERA CLIENT SCREEN (Phone 2 â€” scanner then streaming) -->
 <div class="screen p2p-screen" id="screen-cam-client">
   <div class="p2p-topbar">
     <div style="display:flex;align-items:center;gap:10px">
@@ -828,11 +841,11 @@ html,body{height:100%;overflow:hidden;background:var(--dark);color:var(--text);f
     <video id="cam-client-preview" playsinline autoplay muted></video>
     <div class="cam-client-overlay">
       <div class="cam-client-stat"><div class="rec-dot"></div>REC HD</div>
-      <div class="cam-client-stat" id="cam-stream-stat">📡 Streaming 720p</div>
+      <div class="cam-client-stat" id="cam-stream-stat">ðŸ“¡ Streaming 720p</div>
     </div>
   </div>
   <div class="scanner-bottom">
-    <div class="scanner-status" id="cam-client-status">Initialising camera…</div>
+    <div class="scanner-status" id="cam-client-status">Initialising cameraâ€¦</div>
     <div class="upload-progress-bar" id="upload-bar" style="display:none">
       <div class="upload-progress-fill" id="upload-fill" style="width:0%"></div>
     </div>
@@ -936,15 +949,15 @@ function renderHome(){
       const last=sessions[sessions.length-1].balls.reduce((a,b)=>a+(b||0),0);
       const prev=sessions[sessions.length-2].balls.reduce((a,b)=>a+(b||0),0);
       const diff=last-prev;
-      if(diff>0)trendHtml=`<div class="trend-up">▲ +${diff} last session</div>`;
-      else if(diff<0)trendHtml=`<div class="trend-down">▼ ${diff} last session</div>`;
-      else trendHtml=`<div class="trend-same">— no change</div>`;
+      if(diff>0)trendHtml=`<div class="trend-up">â–² +${diff} last session</div>`;
+      else if(diff<0)trendHtml=`<div class="trend-down">â–¼ ${diff} last session</div>`;
+      else trendHtml=`<div class="trend-same">â€” no change</div>`;
     }
     h+=`<div class="player-card" onclick="showPlayerDetail('${k}')">
       <div class="player-avatar">${initials}</div>
       <div class="player-info">
         <div class="player-name">${k}</div>
-        <div class="player-meta">${sessions.length} session${sessions.length!==1?'s':''} recorded${sessions.length?` · Best: ${bestScore}`:''}</div>
+        <div class="player-meta">${sessions.length} session${sessions.length!==1?'s':''} recorded${sessions.length?` Â· Best: ${bestScore}`:''}</div>
         ${trendHtml}
       </div>
       <div class="player-best">
@@ -983,16 +996,16 @@ function showPlayerDetail(key){
   document.getElementById('pd-stats').innerHTML=`
     <div class="pd-stat"><div class="pd-stat-val">${sessions.length}</div><div class="pd-stat-label">Sessions</div></div>
     <div class="pd-stat"><div class="pd-stat-val">${best}</div><div class="pd-stat-label">Best</div></div>
-    <div class="pd-stat"><div class="pd-stat-val">${avg||'—'}</div><div class="pd-stat-label">Avg</div></div>
-    <div class="pd-stat"><div class="pd-stat-val">${last||'—'}</div><div class="pd-stat-label">Last</div></div>`;
+    <div class="pd-stat"><div class="pd-stat-val">${avg||'â€”'}</div><div class="pd-stat-label">Avg</div></div>
+    <div class="pd-stat"><div class="pd-stat-val">${last||'â€”'}</div><div class="pd-stat-label">Last</div></div>`;
 
   // Comparison banner if 2+ sessions
   const compArea=document.getElementById('pd-comparison-area');
   if(sessions.length>=2){
     compArea.innerHTML=`<div style="padding:12px 16px 4px"><div class="section-label" style="padding:0 0 8px">Progress</div>
     <div class="comparison-banner" onclick="showComparison()">
-      <div class="comparison-banner-title">📊 Progress Analysis Available</div>
-      <div class="comparison-banner-sub">Compare latest sessions · See improvements & weaknesses</div>
+      <div class="comparison-banner-title">ðŸ“Š Progress Analysis Available</div>
+      <div class="comparison-banner-sub">Compare latest sessions Â· See improvements & weaknesses</div>
     </div></div>`;
   } else {
     compArea.innerHTML='';
@@ -1000,7 +1013,7 @@ function showPlayerDetail(key){
 
   let sessHtml='';
   if(!sessions.length){
-    sessHtml='<div style="text-align:center;padding:24px 16px;color:var(--muted);font-size:0.82rem">No sessions yet — start one below</div>';
+    sessHtml='<div style="text-align:center;padding:24px 16px;color:var(--muted);font-size:0.82rem">No sessions yet â€” start one below</div>';
   } else {
     [...sessions].reverse().forEach((s,ri)=>{
       const i=sessions.length-1-ri;
@@ -1012,10 +1025,10 @@ function showPlayerDetail(key){
           <div class="session-date">${s.date}</div>
         </div>
         <div class="session-item-right" style="display:flex;align-items:center;gap:8px">
-          ${s.hasVideo?`<button onclick="event.stopPropagation();openVideoAnalysis('${key}',${i})" style="background:rgba(26,74,124,0.2);border:1px solid rgba(100,160,255,0.35);color:#8cf;border-radius:7px;padding:5px 10px;font-size:0.72rem;cursor:pointer;font-family:'DM Sans',sans-serif;display:flex;align-items:center;gap:4px;flex-shrink:0">📹</button>`:''}
+          ${s.hasVideo?`<button onclick="event.stopPropagation();openVideoAnalysis('${key}',${i})" style="background:rgba(26,74,124,0.2);border:1px solid rgba(100,160,255,0.35);color:#8cf;border-radius:7px;padding:5px 10px;font-size:0.72rem;cursor:pointer;font-family:'DM Sans',sans-serif;display:flex;align-items:center;gap:4px;flex-shrink:0">ðŸ“¹</button>`:''}
           <div>
             <div class="session-score-big">${total}</div>
-            <div class="session-pct">${pct}% · /600</div>
+            <div class="session-pct">${pct}% Â· /600</div>
           </div>
         </div>
       </div>`;
@@ -1039,7 +1052,7 @@ function startNewSession(){
   };
   // Offer camera choice: this phone vs remote
   document.getElementById('choice-session-label').textContent=
-    currentSession.playerKey+' · Session '+currentSession.sessionNum;
+    currentSession.playerKey+' Â· Session '+currentSession.sessionNum;
   showScreen('screen-cam-choice');
 }
 
@@ -1050,7 +1063,7 @@ let camMirror=false;
 
 function openCameraSetup(){
   document.getElementById('cam-brand-player-name').textContent=
-    (currentSession?currentSession.playerKey+' · Session '+currentSession.sessionNum:'');
+    (currentSession?currentSession.playerKey+' Â· Session '+currentSession.sessionNum:'');
   showScreen('screen-camera-setup');
   // Re-use existing stream if already active, else request it
   if(mainStream&&mainStream.active){
@@ -1078,7 +1091,7 @@ async function startCameraForSetup(){
     v.play().catch(()=>{});
   }catch(err){
     console.warn('Camera setup error:',err);
-    toast('📷 Camera unavailable');
+    toast('ðŸ“· Camera unavailable');
   }
 }
 
@@ -1086,7 +1099,7 @@ function confirmCameraAndScore(){
   // Tear down setup event listeners
   const view=document.getElementById('cam-setup-view');
   view.onclick=null;
-  // Transition to scoring — stream keeps running
+  // Transition to scoring â€” stream keeps running
   renderScoringScreen();
   showScreen('screen-scoring');
   // Attach live stream to the scoring preview
@@ -1105,14 +1118,14 @@ function confirmCameraAndScore(){
   startRecording();
   const badge=document.getElementById('sc-rec-badge');if(badge)badge.style.display='inline-flex';
   setTimeout(()=>{
-    speak('Session '+currentSession.sessionNum+' recording — come on then, let\'s see what '+currentSession.playerKey+' is made of! Block shots, ten deliveries!',true);
+    speak('Session '+currentSession.sessionNum+' recording â€” come on then, let\'s see what '+currentSession.playerKey+' is made of! Block shots, ten deliveries!',true);
   },600);
 }
 
 // Zoom via CSS transform (works cross-platform; also try camera API)
 function updateCameraZoom(val){
   camSetupZoom=parseFloat(val);
-  document.getElementById('cam-zoom-val').textContent=camSetupZoom.toFixed(1)+'×';
+  document.getElementById('cam-zoom-val').textContent=camSetupZoom.toFixed(1)+'Ã—';
   applyZoom(document.getElementById('cam-setup-video'),camSetupZoom);
   applyZoom(document.getElementById('sc-cam-live'),camSetupZoom);
   // Try native camera zoom if supported
@@ -1150,7 +1163,7 @@ function handlePinchMove(e){
     const newZoom=Math.min(5,Math.max(1,pinchStartZoom*scale));
     camSetupZoom=newZoom;
     document.getElementById('cam-zoom-slider').value=newZoom;
-    document.getElementById('cam-zoom-val').textContent=newZoom.toFixed(1)+'×';
+    document.getElementById('cam-zoom-val').textContent=newZoom.toFixed(1)+'Ã—';
     applyZoom(document.getElementById('cam-setup-video'),newZoom);
   }
 }
@@ -1190,7 +1203,7 @@ function toggleMirror(){
 
 function renderScoringScreen(){
   document.getElementById('sc-player-name').textContent=currentSession.playerKey;
-  document.getElementById('sc-session-label').textContent='Session '+currentSession.sessionNum+' · '+currentSession.date;
+  document.getElementById('sc-session-label').textContent='Session '+currentSession.sessionNum+' Â· '+currentSession.date;
   updateScoringUI();
 }
 
@@ -1235,7 +1248,7 @@ function clickBallDot(i){
   if(sc!==null){
     rescoreBallIdx=i;
     const si=Math.floor(i/10);const bi=i%10;
-    document.getElementById('rescore-subtitle').textContent=SHOTS[si].name+' — Ball '+(bi+1)+' (current: '+sc+' pts)';
+    document.getElementById('rescore-subtitle').textContent=SHOTS[si].name+' â€” Ball '+(bi+1)+' (current: '+sc+' pts)';
     openModal('modal-rescore');
   } else if(i<=currentSession.currentBall){
     currentSession.currentBall=i;
@@ -1279,9 +1292,9 @@ function recordScore(s){
 
 function showShotTransition(nextShotIdx, prevShotIdx, prevTotal){
   const overlay=document.getElementById('shot-transition');
-  document.getElementById('st-eyebrow').textContent='Shot '+(prevShotIdx+1)+' complete — up next';
+  document.getElementById('st-eyebrow').textContent='Shot '+(prevShotIdx+1)+' complete â€” up next';
   document.getElementById('st-shot-name').textContent=SHOTS[nextShotIdx].name+'s';
-  document.getElementById('st-detail').textContent='10 balls · '+SHOTS[nextShotIdx].name;
+  document.getElementById('st-detail').textContent='10 balls Â· '+SHOTS[nextShotIdx].name;
   document.getElementById('st-score-pill').textContent=SHOTS[prevShotIdx].name+': '+prevTotal+' / 100';
   overlay.classList.add('show');
   // Speech for next block
@@ -1365,9 +1378,9 @@ function renderResults(playerKey,sessionIdx){
   const done=s.balls.filter(x=>x!==null).length;
   const pct=Math.round(total/Math.max(done*10,1)*100);
   document.getElementById('res-player').textContent=playerKey;
-  document.getElementById('res-session-tag').textContent='Session '+(sessionIdx+1)+' · '+s.date;
+  document.getElementById('res-session-tag').textContent='Session '+(sessionIdx+1)+' Â· '+s.date;
   document.getElementById('res-total').textContent=total;
-  document.getElementById('res-pct').textContent=pct+'% · '+done+' balls';
+  document.getElementById('res-pct').textContent=pct+'% Â· '+done+' balls';
   const grade=getGrade(pct);
   const g=document.getElementById('res-grade');
   g.textContent=grade.l;g.style.color=grade.c;g.style.background=grade.bg;g.style.border='1px solid '+grade.c+'55';
@@ -1385,7 +1398,7 @@ function renderResults(playerKey,sessionIdx){
     balls.forEach(b=>{
       const col=b!==null?SC[b]:'rgba(255,255,255,0.08)';
       const tc=b!==null?SC_TEXT[b]:'rgba(255,255,255,0.25)';
-      mini+=`<div class="mb" style="background:${col};color:${tc}">${b!==null?b:'·'}</div>`;
+      mini+=`<div class="mb" style="background:${col};color:${tc}">${b!==null?b:'Â·'}</div>`;
     });
     breakdown+=`<div class="shot-row">
       <div class="shot-row-top"><span class="shot-row-name">${sh.name}</span><span class="shot-row-score">${t}<span style="font-size:0.65rem;color:var(--muted)">/100</span></span></div>
@@ -1398,9 +1411,9 @@ function renderResults(playerKey,sessionIdx){
   // Video button
   const vidArea=document.getElementById('res-video-btn-area');
   if(s.hasVideo){
-    vidArea.innerHTML=`<button onclick="openVideoAnalysis('${playerKey}',${sessionIdx})" style="width:100%;background:linear-gradient(135deg,rgba(26,74,124,0.8),rgba(26,74,124,0.5));border:1px solid rgba(100,160,255,0.4);color:#8cf;border-radius:12px;padding:14px;font-family:'Bebas Neue',sans-serif;font-size:1.1rem;letter-spacing:0.08em;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px">📹 Player Front View — Video Analysis</button>`;
+    vidArea.innerHTML=`<button onclick="openVideoAnalysis('${playerKey}',${sessionIdx})" style="width:100%;background:linear-gradient(135deg,rgba(26,74,124,0.8),rgba(26,74,124,0.5));border:1px solid rgba(100,160,255,0.4);color:#8cf;border-radius:12px;padding:14px;font-family:'Bebas Neue',sans-serif;font-size:1.1rem;letter-spacing:0.08em;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px">ðŸ“¹ Player Front View â€” Video Analysis</button>`;
   } else if(pendingVideoSession&&pendingVideoSession.playerKey===playerKey&&pendingVideoSession.idx===sessionIdx){
-    vidArea.innerHTML=`<div style="text-align:center;font-size:0.78rem;color:var(--muted);padding:8px 0">⏳ Video processing… available shortly</div>`;
+    vidArea.innerHTML=`<div style="text-align:center;font-size:0.78rem;color:var(--muted);padding:8px 0">â³ Video processingâ€¦ available shortly</div>`;
   } else {
     vidArea.innerHTML='';
   }
@@ -1416,7 +1429,7 @@ function renderResults(playerKey,sessionIdx){
   },100);
 }
 
-// ─── Build cumulative worm data from a balls array ─────────────────────────
+// â”€â”€â”€ Build cumulative worm data from a balls array â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 // Returns array of 61 points: [0, cumAfterBall1, cumAfterBall2, ... cumAfterBall60]
 function buildWormData(balls){
   const pts=[0];
@@ -1428,7 +1441,7 @@ function buildWormData(balls){
   return pts;
 }
 
-// ─── Render single-session worm chart ───────────────────────────────────────
+// â”€â”€â”€ Render single-session worm chart â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 function renderWormChart(canvasId, balls, sessionLabel){
   const existing = canvasId==='resWorm' ? chartResWorm : chartCompWorm;
   if(existing){existing.destroy();}
@@ -1503,7 +1516,7 @@ function renderWormChart(canvasId, balls, sessionLabel){
               if(b===0)return 'Start';
               const si=Math.floor((b-1)/10);
               const bi=(b-1)%10;
-              return SHOTS[si].name+' — Ball '+(bi+1);
+              return SHOTS[si].name+' â€” Ball '+(bi+1);
             },
             label:(item)=>{
               const b=item.dataIndex;
@@ -1583,7 +1596,7 @@ function renderWormChart(canvasId, balls, sessionLabel){
   else chartCompWorm=chart;
 }
 
-// ─── Render dual-session worm for comparison ────────────────────────────────
+// â”€â”€â”€ Render dual-session worm for comparison â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 function renderCompWormChart(balls1, balls2, label1, label2){
   if(chartCompWorm){chartCompWorm.destroy();chartCompWorm=null;}
   const w1=buildWormData(balls1);
@@ -1663,7 +1676,7 @@ function renderCompWormChart(balls1, balls2, label1, label2){
               const b=items[0].dataIndex;
               if(b===0)return'Start';
               const si=Math.floor((b-1)/10);const bi=(b-1)%10;
-              return SHOTS[si].name+' — Ball '+(bi+1);
+              return SHOTS[si].name+' â€” Ball '+(bi+1);
             },
             label:(item)=>'  '+item.dataset.label+': '+item.raw+' pts'
           }
@@ -1716,9 +1729,9 @@ function renderCompWormChart(balls1, balls2, label1, label2){
 }
 
 
-// ─── Histogram: compact towers — two colours matching the radar comparison chart ──
-// Single session  → gold gradient only
-// Two sessions    → blue (S1, dashed border) + gold (S2, solid border)
+// â”€â”€â”€ Histogram: compact towers â€” two colours matching the radar comparison chart â”€â”€
+// Single session  â†’ gold gradient only
+// Two sessions    â†’ blue (S1, dashed border) + gold (S2, solid border)
 function renderHistogram(canvasId, balls1, balls2, label1, label2){
   const existing = canvasId==='resHistogram' ? chartResHist : chartCompHist;
   if(existing){existing.destroy();}
@@ -1726,7 +1739,7 @@ function renderHistogram(canvasId, balls1, balls2, label1, label2){
   const totals1 = SHOTS.map((_,i)=>balls1.slice(i*10,(i+1)*10).reduce((a,b)=>a+(b||0),0));
   const totals2 = balls2 ? SHOTS.map((_,i)=>balls2.slice(i*10,(i+1)*10).reduce((a,b)=>a+(b||0),0)) : null;
 
-  // ── Two palette entries only — matching radar colours exactly ──
+  // â”€â”€ Two palette entries only â€” matching radar colours exactly â”€â”€
   // Blue  = 'rgba(100,160,255,0.7)'  (Session 1 / earlier)
   // Gold  = '#c9a227 / #f0c84a'      (Session 2 / current)
 
@@ -1752,7 +1765,7 @@ function renderHistogram(canvasId, balls1, balls2, label1, label2){
   }
 
   const datasets = totals2 ? [
-    // Session 1 — blue, tight grouped bar
+    // Session 1 â€” blue, tight grouped bar
     {
       label: label1,
       data: totals1,
@@ -1764,7 +1777,7 @@ function renderHistogram(canvasId, balls1, balls2, label1, label2){
       barPercentage: 0.92,
       categoryPercentage: 0.72,
     },
-    // Session 2 — gold, tight grouped bar
+    // Session 2 â€” gold, tight grouped bar
     {
       label: label2,
       data: totals2,
@@ -1777,7 +1790,7 @@ function renderHistogram(canvasId, balls1, balls2, label1, label2){
       categoryPercentage: 0.72,
     }
   ] : [
-    // Single session — gold only
+    // Single session â€” gold only
     {
       label: label1,
       data: totals1,
@@ -1925,11 +1938,11 @@ function showComparison(){
 
   document.getElementById('comp-sessions-row').innerHTML=`
     <div class="comp-sess-tag"><div class="comp-sess-label">Session ${n1}</div><div class="comp-sess-score">${t1}</div><div style="font-size:0.6rem;color:var(--muted)">${s1.date}</div></div>
-    <div class="comp-arrow">${delta>=0?'→':'→'}</div>
+    <div class="comp-arrow">${delta>=0?'â†’':'â†’'}</div>
     <div class="comp-sess-tag" style="border-color:rgba(201,162,39,0.3)"><div class="comp-sess-label">Session ${n2}</div><div class="comp-sess-score" style="color:${delta>=0?'#6e6':'#e88'}">${t2}</div><div style="font-size:0.6rem;color:var(--muted)">${s2.date}</div></div>`;
 
   const bannerClass=delta>0?'up':delta<0?'down':'same';
-  const bannerIcon=delta>0?'📈':delta<0?'📉':'➡️';
+  const bannerIcon=delta>0?'ðŸ“ˆ':delta<0?'ðŸ“‰':'âž¡ï¸';
   const bannerText=delta>0?`Improved by <strong>${delta} points</strong> from Session ${n1} to ${n2}`:delta<0?`Dropped by <strong>${Math.abs(delta)} points</strong> from Session ${n1} to ${n2}`:`Score unchanged between sessions`;
   document.getElementById('comp-delta-banner-area').innerHTML=`
     <div class="comp-delta-banner ${bannerClass}" style="margin:12px 16px 4px">
@@ -1954,19 +1967,19 @@ function showComparison(){
   const strengths=shotData.filter(d=>d.pct2>=75).sort((a,b)=>b.pct2-a.pct2);
   let insightsHtml='';
   if(improved.length){
-    insightsHtml+=`<div class="insight-card strength"><div class="insight-icon">✅</div><div class="insight-text"><strong>Improved:</strong> ${improved.map(d=>`${d.name} (+${d.delta}pts)`).join(', ')}. Keep building on this momentum.</div></div>`;
+    insightsHtml+=`<div class="insight-card strength"><div class="insight-icon">âœ…</div><div class="insight-text"><strong>Improved:</strong> ${improved.map(d=>`${d.name} (+${d.delta}pts)`).join(', ')}. Keep building on this momentum.</div></div>`;
   }
   if(declined.length){
-    insightsHtml+=`<div class="insight-card weakness"><div class="insight-icon">⚠️</div><div class="insight-text"><strong>Needs attention:</strong> ${declined.map(d=>`${d.name} (${d.delta}pts)`).join(', ')}. Focus on technique in next drill session.</div></div>`;
+    insightsHtml+=`<div class="insight-card weakness"><div class="insight-icon">âš ï¸</div><div class="insight-text"><strong>Needs attention:</strong> ${declined.map(d=>`${d.name} (${d.delta}pts)`).join(', ')}. Focus on technique in next drill session.</div></div>`;
   }
   if(weaknesses.length){
-    insightsHtml+=`<div class="insight-card weakness"><div class="insight-icon">🎯</div><div class="insight-text"><strong>Current weaknesses (below 50%):</strong> ${weaknesses.map(d=>`${d.name} (${d.pct2}%)`).join(', ')}. These require dedicated practice.</div></div>`;
+    insightsHtml+=`<div class="insight-card weakness"><div class="insight-icon">ðŸŽ¯</div><div class="insight-text"><strong>Current weaknesses (below 50%):</strong> ${weaknesses.map(d=>`${d.name} (${d.pct2}%)`).join(', ')}. These require dedicated practice.</div></div>`;
   }
   if(strengths.length){
-    insightsHtml+=`<div class="insight-card strength"><div class="insight-icon">⭐</div><div class="insight-text"><strong>Strengths (75%+):</strong> ${strengths.map(d=>`${d.name} (${d.pct2}%)`).join(', ')}. Consistent execution — maintain standards.</div></div>`;
+    insightsHtml+=`<div class="insight-card strength"><div class="insight-icon">â­</div><div class="insight-text"><strong>Strengths (75%+):</strong> ${strengths.map(d=>`${d.name} (${d.pct2}%)`).join(', ')}. Consistent execution â€” maintain standards.</div></div>`;
   }
   if(!insightsHtml){
-    insightsHtml='<div class="insight-card info"><div class="insight-icon">ℹ️</div><div class="insight-text">Similar performance across both sessions. Continue drilling all shot types consistently.</div></div>';
+    insightsHtml='<div class="insight-card info"><div class="insight-icon">â„¹ï¸</div><div class="insight-text">Similar performance across both sessions. Continue drilling all shot types consistently.</div></div>';
   }
   document.getElementById('comp-insights').innerHTML=insightsHtml;
 
@@ -1974,7 +1987,7 @@ function showComparison(){
   let shotRowsHtml='';
   shotData.forEach(d=>{
     const badgeClass=d.delta>5?'improved':d.delta<-5?'declined':d.pct2<50?'weak':'same';
-    const badgeText=d.delta>5?'▲ +'+d.delta:d.delta<-5?'▼ '+d.delta:d.pct2<50?'WEAK':'→ SAME';
+    const badgeText=d.delta>5?'â–² +'+d.delta:d.delta<-5?'â–¼ '+d.delta:d.pct2<50?'WEAK':'â†’ SAME';
     const pct1=Math.round(d.t1/100*100);
     const pct2=Math.round(d.t2/100*100);
     const dcls=d.delta>0?'pos':d.delta<0?'neg':'zero';
@@ -1985,7 +1998,7 @@ function showComparison(){
       </div>
       <div class="scr-scores">
         <div class="scr-score-block"><div class="scr-score-val" style="color:var(--muted)">${d.t1}</div><div class="scr-score-label">S${sessions.length-1}</div></div>
-        <div class="scr-arrow">→</div>
+        <div class="scr-arrow">â†’</div>
         <div class="scr-score-block"><div class="scr-score-val" style="color:var(--gold-l)">${d.t2}</div><div class="scr-score-label">S${sessions.length}</div></div>
         <div class="scr-delta ${dcls}">${d.delta>0?'+':''}${d.delta}</div>
       </div>
@@ -2068,7 +2081,7 @@ function videoDBKey(playerKey,sessionIdx){return playerKey+'_'+sessionIdx;}
 
 // --- Camera init: reuses the stream started during camera setup ---
 async function initCameraRecording(){
-  // Stream is already running from camera setup — just start recording
+  // Stream is already running from camera setup â€” just start recording
   if(mainStream&&mainStream.active){
     startRecording();
     return;
@@ -2087,7 +2100,7 @@ async function initCameraRecording(){
     const badge=document.getElementById('sc-rec-badge');if(badge)badge.style.display='inline-flex';
   }catch(err){
     console.warn('Camera error:',err);
-    toast('📷 Camera unavailable — scoring only');
+    toast('ðŸ“· Camera unavailable â€” scoring only');
     document.getElementById('sc-cam-no-video').style.display='flex';
   }
 }
@@ -2135,13 +2148,13 @@ function stopRecording(){
 // --- Open Video Analysis screen ---
 
 
-// ─── sticky ball: keeps overlay on the selected ball during pre-roll ────────
+// â”€â”€â”€ sticky ball: keeps overlay on the selected ball during pre-roll â”€â”€â”€â”€â”€â”€â”€â”€
 let stickyBall=-1; // ball index forced on overlay until video passes its timestamp
 
 
 // ===================== YOUTUBE PLAYBACK ENGINE =====================
 // Handles both local video (IndexedDB) and YouTube-hosted sessions.
-// YouTube is the primary store when available — zero server disk usage.
+// YouTube is the primary store when available â€” zero server disk usage.
 
 let ytPlayer = null;          // YT.Player instance
 let ytPollTimer = null;       // setInterval for scrubber/overlay sync
@@ -2151,7 +2164,7 @@ let ytPlayerSession = null;   // session object linked to current YT player
 let ytTokenClient = null;     // Google OAuth2 token client for uploads
 let ytAccessToken = null;     // cached upload token
 
-// ── Load IFrame API once ──────────────────────────────────────────────
+// â”€â”€ Load IFrame API once â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 function loadYTApi(){
   return new Promise(res=>{
     if(ytReady){res();return;}
@@ -2168,7 +2181,7 @@ function loadYTApi(){
   });
 }
 
-// ── Create/replace YouTube player in the container ─────────────────────
+// â”€â”€ Create/replace YouTube player in the container â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 async function mountYTPlayer(videoId, session){
   await loadYTApi();
   ytPlayerSession=session;
@@ -2206,7 +2219,7 @@ async function mountYTPlayer(videoId, session){
 function onYTReady(e){
   ytDuration=ytPlayer.getDuration()||0;
   document.getElementById('vid-time-dur').textContent=fmtTime(ytDuration);
-  document.getElementById('vid-play-btn').textContent='▶';
+  document.getElementById('vid-play-btn').textContent='â–¶';
   document.getElementById('vid-playback-controls').style.display='block';
   document.getElementById('vid-recording-status').style.display='none';
   document.getElementById('vid-score-overlay').style.display='block';
@@ -2235,10 +2248,10 @@ function onYTStateChange(e){
   const s=e.data;
   const btn=document.getElementById('vid-play-btn');
   if(s===YT.PlayerState.PLAYING){
-    btn.textContent='⏸';
+    btn.textContent='â¸';
     startYTPoll();
   } else {
-    btn.textContent='▶';
+    btn.textContent='â–¶';
     stopYTPoll();
     ytSyncOnce(); // final sync on pause/end
   }
@@ -2246,7 +2259,7 @@ function onYTStateChange(e){
 
 function onYTError(e){
   console.warn('YouTube player error:',e.data);
-  toast('YouTube error '+e.data+' — check video ID');
+  toast('YouTube error '+e.data+' â€” check video ID');
 }
 
 function startYTPoll(){
@@ -2278,7 +2291,7 @@ function ytSyncOnce(){
   }
 }
 
-// ── Routing wrappers — pick YouTube or local video ─────────────────────
+// â”€â”€ Routing wrappers â€” pick YouTube or local video â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 // These override the functions in the video engine section below.
 
 function togglePlay(){
@@ -2325,7 +2338,7 @@ function changeSpeed(){
     const v=document.getElementById('vid-main');
     if(v)v.playbackRate=sp;
   }
-  document.getElementById('vid-speed-btn').textContent=sp+'×';
+  document.getElementById('vid-speed-btn').textContent=sp+'Ã—';
 }
 
 function snapToBall(ballIdx){
@@ -2364,7 +2377,7 @@ function openOnYouTube(){
   }
 }
 
-// ── openVideoAnalysis — routes to YouTube or local ────────────────────
+// â”€â”€ openVideoAnalysis â€” routes to YouTube or local â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 async function openVideoAnalysis(playerKey,sessionIdx){
   currentPlayerKey=playerKey;
   viewingSessionIdx=sessionIdx;
@@ -2372,11 +2385,11 @@ async function openVideoAnalysis(playerKey,sessionIdx){
   const s=p.sessions[sessionIdx];
 
   document.getElementById('vid-player-label').textContent=playerKey;
-  document.getElementById('vid-session-label').textContent='Session '+(sessionIdx+1)+' · '+s.date+' — Player Front View';
+  document.getElementById('vid-session-label').textContent='Session '+(sessionIdx+1)+' Â· '+s.date+' â€” Player Front View';
   document.getElementById('vid-rec-indicator').style.display='none';
   document.getElementById('vid-playback-controls').style.display='none';
   document.getElementById('vid-recording-status').style.display='flex';
-  document.getElementById('vid-status-text').textContent='Loading video…';
+  document.getElementById('vid-status-text').textContent='Loading videoâ€¦';
   document.getElementById('btn-stop-rec').style.display='none';
   document.getElementById('vid-score-overlay').style.display='none';
   document.getElementById('vid-no-video').style.display='none';
@@ -2385,7 +2398,7 @@ async function openVideoAnalysis(playerKey,sessionIdx){
   document.getElementById('vid-dl-btn').style.display='inline-flex';
 
   document.getElementById('vid-brand-player').textContent=playerKey.toUpperCase();
-  document.getElementById('vid-brand-session').textContent='Session '+(sessionIdx+1)+' · '+s.date;
+  document.getElementById('vid-brand-session').textContent='Session '+(sessionIdx+1)+' Â· '+s.date;
 
   // Destroy any running YT player first
   if(ytPlayer){try{ytPlayer.destroy();}catch(e){}ytPlayer=null;stopYTPoll();}
@@ -2403,7 +2416,7 @@ async function openVideoAnalysis(playerKey,sessionIdx){
   renderVideoTimeline(s);
   showScreen('screen-video');
 
-  // ── ROUTE: YouTube first, then local blob ──
+  // â”€â”€ ROUTE: YouTube first, then local blob â”€â”€
   if(s.youtubeVideoId){
     document.getElementById('vid-main').style.display='none';
     document.getElementById('yt-player-wrap').style.display='block';
@@ -2417,7 +2430,7 @@ async function openVideoAnalysis(playerKey,sessionIdx){
     return;
   }
 
-  // ── ROUTE: local IndexedDB blob ──
+  // â”€â”€ ROUTE: local IndexedDB blob â”€â”€
   document.getElementById('yt-player-wrap').style.display='none';
   document.getElementById('vid-main').style.display='block';
 
@@ -2434,7 +2447,7 @@ async function openVideoAnalysis(playerKey,sessionIdx){
       document.getElementById('vid-recording-status').style.display='none';
       document.getElementById('vid-score-overlay').style.display='block';
       document.getElementById('vid-time-dur').textContent=fmtTime(videoEl.duration);
-      document.getElementById('vid-play-btn').textContent='▶';
+      document.getElementById('vid-play-btn').textContent='â–¶';
       attachVideoListeners(videoEl,s);
       activeBallIdx=0;stickyBall=-1;
       updateOverlayForBall(0,s);highlightTimelineBall(0);
@@ -2515,11 +2528,11 @@ async function uploadToYouTube(blob,playerKey,sessionNum,sessionDate){
   };
 
   try{
-    setProgress(2,'Connecting to YouTube…');
+    setProgress(2,'Connecting to YouTubeâ€¦');
     const token=await ensureYTToken();
-    setProgress(5,'Preparing upload…');
+    setProgress(5,'Preparing uploadâ€¦');
 
-    const title=`Master Stroke — ${playerKey} — Session ${sessionNum} — ${sessionDate}`;
+    const title=`Master Stroke â€” ${playerKey} â€” Session ${sessionNum} â€” ${sessionDate}`;
     const meta={
       snippet:{
         title,
@@ -2551,7 +2564,7 @@ Date: ${sessionDate}`,
     const uploadUri=initResp.headers.get('Location');
     if(!uploadUri)throw new Error('No upload URI returned by YouTube');
 
-    setProgress(10,'Uploading video to YouTube…');
+    setProgress(10,'Uploading video to YouTubeâ€¦');
 
     // Step 2: Upload with progress via XHR (fetch doesn't expose upload progress)
     const videoId=await new Promise((res,rej)=>{
@@ -2578,7 +2591,7 @@ Date: ${sessionDate}`,
       xhr.send(blob);
     });
 
-    setProgress(97,'Processing on YouTube…');
+    setProgress(97,'Processing on YouTubeâ€¦');
 
     return videoId;
 
@@ -2588,7 +2601,7 @@ Date: ${sessionDate}`,
   }
 }
 
-// ── Rewritten onRecordingStop — uploads to YouTube, falls back to IndexedDB ──
+// â”€â”€ Rewritten onRecordingStop â€” uploads to YouTube, falls back to IndexedDB â”€â”€
 async function onRecordingStop(){
   if(!videoChunks.length)return;
   const mime=videoChunks[0].type||'video/webm';
@@ -2606,7 +2619,7 @@ async function onRecordingStop(){
                  window.GOOGLE_CLIENT_ID!=='YOUR_GOOGLE_CLIENT_ID');
   if(useYT){
     try{
-      toast('📤 Uploading session video to YouTube…');
+      toast('ðŸ“¤ Uploading session video to YouTubeâ€¦');
       const videoId=await uploadToYouTube(videoBlob,playerKey,sessionNum,sessionDate);
       // Store YouTube video ID on session
       if(p&&p.sessions[idx]){
@@ -2616,9 +2629,9 @@ async function onRecordingStop(){
       }
       // Hide upload overlay
       document.getElementById('yt-upload-overlay').style.display='none';
-      // Free the local blob — no longer needed
+      // Free the local blob â€” no longer needed
       videoBlob=null;
-      toast('✅ Video uploaded to YouTube — unlisted & ready');
+      toast('âœ… Video uploaded to YouTube â€” unlisted & ready');
       // Refresh screens
       const resultsScreen=document.getElementById('screen-results');
       if(resultsScreen.classList.contains('active'))renderResults(playerKey,idx);
@@ -2627,7 +2640,7 @@ async function onRecordingStop(){
       return;
     }catch(err){
       console.warn('YouTube upload failed, falling back to IndexedDB:',err.message);
-      toast('YouTube upload failed — saving locally instead');
+      toast('YouTube upload failed â€” saving locally instead');
       document.getElementById('yt-upload-overlay').style.display='none';
     }
   }
@@ -2639,14 +2652,14 @@ async function onRecordingStop(){
     p.sessions[idx].hasVideo=true;
     saveData(DB);
   }
-  toast('📹 Video saved locally — tap "Video Analysis" to review');
+  toast('ðŸ“¹ Video saved locally â€” tap "Video Analysis" to review');
   const resultsScreen=document.getElementById('screen-results');
   if(resultsScreen.classList.contains('active'))renderResults(playerKey,idx);
   showPlayerDetail(playerKey);
   pendingVideoSession=null;
 }
 
-// ─── Attach all video event listeners (called once per video load) ───────────
+// â”€â”€â”€ Attach all video event listeners (called once per video load) â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 function attachVideoListeners(videoEl,session){
   // Abort any previous listeners
   if(videoEl._abortCtrl)videoEl._abortCtrl.abort();
@@ -2656,8 +2669,8 @@ function attachVideoListeners(videoEl,session){
 
   videoEl.addEventListener('timeupdate',()=>syncPlayback(videoEl,session),sig);
   videoEl.addEventListener('seeked',    ()=>syncPlayback(videoEl,session),sig);
-  videoEl.addEventListener('play', ()=>{document.getElementById('vid-play-btn').textContent='⏸';},sig);
-  videoEl.addEventListener('pause',()=>{document.getElementById('vid-play-btn').textContent='▶';},sig);
+  videoEl.addEventListener('play', ()=>{document.getElementById('vid-play-btn').textContent='â¸';},sig);
+  videoEl.addEventListener('pause',()=>{document.getElementById('vid-play-btn').textContent='â–¶';},sig);
 
   const scrubber=document.getElementById('vid-scrubber');
   // Remove old scrubber listener by cloning only the scrubber element
@@ -2665,7 +2678,7 @@ function attachVideoListeners(videoEl,session){
   scrubber.parentNode.replaceChild(newScrubber,scrubber);
   newScrubber.addEventListener('input',()=>{
     if(!videoEl.duration)return;
-    stickyBall=-1; // user is manually scrubbing — release sticky
+    stickyBall=-1; // user is manually scrubbing â€” release sticky
     const seekTo=(newScrubber.value/1000)*videoEl.duration;
     videoEl.currentTime=seekTo;
     document.getElementById('vid-time-cur').textContent=fmtTime(seekTo);
@@ -2674,11 +2687,11 @@ function attachVideoListeners(videoEl,session){
   });
 }
 
-// ─── Called on timeupdate + seeked ───────────────────────────────────────────
+// â”€â”€â”€ Called on timeupdate + seeked â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 function syncPlayback(videoEl,session){
   if(!videoEl.duration)return;
   const t=videoEl.currentTime;
-  // Update scrubber — find element fresh each time (handles clone replacement)
+  // Update scrubber â€” find element fresh each time (handles clone replacement)
   const scrubber=document.getElementById('vid-scrubber');
   if(scrubber&&!isSyncing)scrubber.value=(t/videoEl.duration)*1000;
   document.getElementById('vid-time-cur').textContent=fmtTime(t);
@@ -2688,16 +2701,16 @@ function syncPlayback(videoEl,session){
     const ts=(session.ballTimestamps||[]);
     const ballTime=ts[stickyBall];
     if(ballTime===undefined||t>=ballTime){
-      stickyBall=-1; // past the ball now — release sticky, let auto-tracking take over
+      stickyBall=-1; // past the ball now â€” release sticky, let auto-tracking take over
     } else {
-      // Still in pre-roll — keep overlay on selected ball, just update time display
+      // Still in pre-roll â€” keep overlay on selected ball, just update time display
       return;
     }
   }
   updateBallAtTime(t,session);
 }
 
-// ─── Update overlay and info strip based on video timestamp ──────────────────
+// â”€â”€â”€ Update overlay and info strip based on video timestamp â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 function updateBallAtTime(currentTime,session){
   const ts=session.ballTimestamps||[];
   let bestIdx=-1;
@@ -2706,10 +2719,10 @@ function updateBallAtTime(currentTime,session){
     // Find last ball whose timestamp <= currentTime
     for(let i=0;i<ts.length;i++){
       if(ts[i]!==undefined&&ts[i]<=currentTime)bestIdx=i;
-      // Don't break early — timestamps may not be perfectly ordered
+      // Don't break early â€” timestamps may not be perfectly ordered
     }
   } else {
-    // No timestamps — map linearly through session
+    // No timestamps â€” map linearly through session
     const v=document.getElementById('vid-main');
     if(v.duration){
       bestIdx=Math.min(59,Math.floor((currentTime/v.duration)*60));
@@ -2729,7 +2742,7 @@ function updateBallAtTime(currentTime,session){
   updateOverlayForBall(bestIdx,session);
 }
 
-// ─── Write shot/ball/score to all overlay elements ───────────────────────────
+// â”€â”€â”€ Write shot/ball/score to all overlay elements â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 function updateOverlayForBall(ballIdx,session){
   const SC_BG ={0:'#6a3030',1:'#6a4a18',4:'#1a3a5a',6:'#5a5a18',8:'#1a4a24',10:'#3a4a10'};
   const SC_FG ={0:'#f99',   1:'#fda',   4:'#7cf',   6:'#ff6',   8:'#7e7',   10:'#fd6'};
@@ -2747,7 +2760,7 @@ function updateOverlayForBall(ballIdx,session){
     pill.style.color=SC_FG[score];
     pill.style.border='1px solid '+SC_FG[score]+'44';
   } else {
-    pill.textContent='—';
+    pill.textContent='â€”';
     pill.style.background='transparent';
     pill.style.color='var(--muted)';
     pill.style.border='none';
@@ -2760,7 +2773,7 @@ function updateOverlayForBall(ballIdx,session){
 }
 
 function clearOverlay(){
-  document.getElementById('vbi-shot').textContent='—';
+  document.getElementById('vbi-shot').textContent='â€”';
   document.getElementById('vbi-ball-num').textContent='';
   const pill=document.getElementById('vbi-score-pill');
   pill.textContent='';pill.style.background='transparent';pill.style.border='none';
@@ -2769,7 +2782,7 @@ function clearOverlay(){
   document.getElementById('vo-score').textContent='';
 }
 
-// ─── Jump to ball — the key function ─────────────────────────────────────────
+// â”€â”€â”€ Jump to ball â€” the key function â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 
 function highlightTimelineBall(ballIdx){
   const balls=document.querySelectorAll('.vbt-ball');
@@ -2801,7 +2814,7 @@ function renderVideoTimeline(session){
   tl.innerHTML=h;
 }
 
-// ─── Playback controls ────────────────────────────────────────────────────────
+// â”€â”€â”€ Playback controls â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 
 
 
@@ -2812,7 +2825,7 @@ function fmtTime(s){
   return m+':'+(sec<10?'0':'')+sec;
 }
 
-// ===================== AUDIO — CRICKET BAT (Cut Shot: leather on English willow) =====================
+// ===================== AUDIO â€” CRICKET BAT (Cut Shot: leather on English willow) =====================
 let audioCtx=null;
 
 function getAudioCtx(){
@@ -2830,12 +2843,12 @@ function playBatHit(score){
   const t=C.currentTime;
   const sr=C.sampleRate;
 
-  // Scale volume with score — score 0 still fires the full cut-shot character, just quieter
+  // Scale volume with score â€” score 0 still fires the full cut-shot character, just quieter
   const vol=0.38+Math.max(0,score/10)*0.62;
 
-  // ── 1. HERTZIAN CONTACT BURST ─────────────────────────────────────────
+  // â”€â”€ 1. HERTZIAN CONTACT BURST â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
   // Oblique cut-shot contact: short contact time (1.9ms), glancing angle
-  // F(τ) = sin(πτ/Tc)^1.5  — the Hertzian bell shape for sphere-on-flat
+  // F(Ï„) = sin(Ï€Ï„/Tc)^1.5  â€” the Hertzian bell shape for sphere-on-flat
   const Tc=0.0019;
   const cLen=Math.ceil(sr*Tc);
   const cBuf=C.createBuffer(1,cLen,sr);
@@ -2845,16 +2858,16 @@ function playBatHit(score){
     cd[i]=Math.pow(Math.sin(Math.PI*tau/Tc),1.5);
   }
   const cSrc=C.createBufferSource(); cSrc.buffer=cBuf;
-  // High-pass + bandpass — oblique angle pushes energy into 1.8–5kHz range
+  // High-pass + bandpass â€” oblique angle pushes energy into 1.8â€“5kHz range
   const cHP=C.createBiquadFilter(); cHP.type='highpass'; cHP.frequency.value=1800;
   const cBP=C.createBiquadFilter(); cBP.type='bandpass'; cBP.frequency.value=3200; cBP.Q.value=1.1;
   const cG=C.createGain(); cG.gain.setValueAtTime(2.6*vol,t);
   cSrc.connect(cHP); cHP.connect(cBP); cBP.connect(cG); cG.connect(C.destination);
   cSrc.start(t);
 
-  // ── 2. LEATHER-ON-WILLOW FRICTION SCRAPE ────────────────────────────
+  // â”€â”€ 2. LEATHER-ON-WILLOW FRICTION SCRAPE â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
   // Ball rolling obliquely across the face creates a ~25ms abrasive hiss
-  // bandpass centred at 2.8kHz — the "thwick" character unique to cut shots
+  // bandpass centred at 2.8kHz â€” the "thwick" character unique to cut shots
   const fLen=Math.ceil(sr*0.025);
   const fBuf=C.createBuffer(1,fLen,sr);
   const fd=fBuf.getChannelData(0);
@@ -2870,8 +2883,8 @@ function playBatHit(score){
   fSrc.connect(fBP); fBP.connect(fG); fG.connect(C.destination);
   fSrc.start(t);
 
-  // ── 3. ENGLISH WILLOW BODY MODES ────────────────────────────────────
-  // Willow is softer than maple/ash — lower fundamental (~145Hz) and
+  // â”€â”€ 3. ENGLISH WILLOW BODY MODES â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+  // Willow is softer than maple/ash â€” lower fundamental (~145Hz) and
   // heavily damped (low Q). Oblique contact only excites the two lowest modes.
   // Mode ratios for fibrous willow: 1 : 2.68 (vs maple's 1 : 2.76)
   const modes=[{f:145,amp:0.45,decay:0.030},{f:389,amp:0.20,decay:0.010}];
@@ -2885,16 +2898,16 @@ function playBatHit(score){
   });
 }
 
-// ===================== SPEECH — ElevenLabs Neural TTS =====================
+// ===================== SPEECH â€” ElevenLabs Neural TTS =====================
 // Uses ElevenLabs Aria voice (closest to Claude Sonnet 4.6's calm American voice)
 // Falls back gracefully to Web Speech API if no key is configured.
 // API key is entered once and stored in localStorage.
 
 let speechEnabled=true;
 let elApiKey=localStorage.getItem('ms_el_key')||'';
-let elVoiceId='9BWtsMINqrJLrRacOk9x'; // Aria — warm, calm American female
+let elVoiceId='9BWtsMINqrJLrRacOk9x'; // Aria â€” warm, calm American female
 let elModel='eleven_turbo_v2_5';       // fastest, highest quality
-const elCache=new Map();               // phrase → AudioBuffer cache
+const elCache=new Map();               // phrase â†’ AudioBuffer cache
 let elCtx=null;
 let elCurrentSource=null;
 
@@ -2914,7 +2927,7 @@ function promptELKey(callback){
   overlay.innerHTML=`
     <div style="background:#1a2a1a;border-radius:20px 20px 0 0;padding:20px 16px 32px;width:100%;border-top:1px solid rgba(201,162,39,0.3);max-width:520px">
       <div style="font-family:'Bebas Neue',sans-serif;font-size:1.4rem;letter-spacing:0.08em;color:var(--gold-l);margin-bottom:4px">Voice Setup</div>
-      <div style="font-size:0.78rem;color:var(--muted);margin-bottom:16px;line-height:1.5">Enter your ElevenLabs API key for high-quality neural voice coaching.<br>Free at <strong style="color:var(--text)">elevenlabs.io</strong> — 10,000 chars/month on free tier.</div>
+      <div style="font-size:0.78rem;color:var(--muted);margin-bottom:16px;line-height:1.5">Enter your ElevenLabs API key for high-quality neural voice coaching.<br>Free at <strong style="color:var(--text)">elevenlabs.io</strong> â€” 10,000 chars/month on free tier.</div>
       <input id="el-key-input" type="password" placeholder="Your ElevenLabs API key" autocomplete="off"
         style="width:100%;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.15);border-radius:10px;padding:13px 14px;color:var(--text);font-family:'DM Sans',sans-serif;font-size:0.95rem;outline:none;margin-bottom:12px">
       <button id="el-key-save" style="width:100%;background:linear-gradient(135deg,var(--gold),var(--gold-l));color:#0f1c0f;border:none;border-radius:12px;padding:14px;font-family:'Bebas Neue',sans-serif;font-size:1.2rem;letter-spacing:0.1em;cursor:pointer;margin-bottom:8px">Save & Enable Voice</button>
@@ -2947,7 +2960,7 @@ async function speakEL(text){
       })
     });
     if(!resp.ok){
-      // Key might be invalid — fall back to Web Speech
+      // Key might be invalid â€” fall back to Web Speech
       console.warn('ElevenLabs error',resp.status);
       speakWebSpeech(text); return;
     }
@@ -3003,7 +3016,7 @@ function speak(text,priority){
   if(elApiKey){
     speakEL(text);
   } else {
-    // First speech attempt — offer key setup, then fall back to Web Speech
+    // First speech attempt â€” offer key setup, then fall back to Web Speech
     if(!localStorage.getItem('ms_el_declined')){
       localStorage.setItem('ms_el_declined','1');
       promptELKey(()=>speak(text,priority));
@@ -3015,7 +3028,7 @@ function speak(text,priority){
 
 function initSpeech(){initWebSpeech();}
 
-// EL key management — add gear icon to scoring screen speech button area
+// EL key management â€” add gear icon to scoring screen speech button area
 function openVoiceSettings(){
   localStorage.removeItem('ms_el_declined');
   promptELKey(()=>toast('Voice updated'));
@@ -3024,43 +3037,43 @@ function openVoiceSettings(){
 function toggleSpeech(){
   speechEnabled=!speechEnabled;
   const btn=document.getElementById('speech-toggle');
-  if(btn){btn.textContent=speechEnabled?'🔊':'🔇';btn.title=speechEnabled?'Mute':'Enable voice';}
+  if(btn){btn.textContent=speechEnabled?'ðŸ”Š':'ðŸ”‡';btn.title=speechEnabled?'Mute':'Enable voice';}
   toast(speechEnabled?'Voice on':'Voice muted');
 }
 
-// ── Phrase content (warm, coaching, calm — matches EL Aria character) ──────
+// â”€â”€ Phrase content (warm, coaching, calm â€” matches EL Aria character) â”€â”€â”€â”€â”€â”€
 const BLOCK_START_PHRASES=[
-  ["Block shots — ten deliveries. Focus on a still head, soft hands, and watching the ball right onto the bat.",
-   "Okay, block shots. Ten balls. Stay compact, weight balanced — play each delivery on its merits.",
+  ["Block shots â€” ten deliveries. Focus on a still head, soft hands, and watching the ball right onto the bat.",
+   "Okay, block shots. Ten balls. Stay compact, weight balanced â€” play each delivery on its merits.",
    "Starting with block shots. Ten deliveries. Head still, bat angled correctly, and don't chase anything outside off.",
-   "Block shots now. Ten balls — take your time with each one, focus on solid technique, and keep the bat close."],
-  ["Straight drives — ten deliveries. Front foot early, drive through the line, full face of the bat.",
+   "Block shots now. Ten balls â€” take your time with each one, focus on solid technique, and keep the bat close."],
+  ["Straight drives â€” ten deliveries. Front foot early, drive through the line, full face of the bat.",
    "Onto straight drives. Ten balls. Look for the full ones, get your weight forward, and drive cleanly through the ball.",
-   "Straight drives next. Ten deliveries — timing is everything here. Let it come to you, get set, full follow-through.",
-   "Here come the straight drives. Ten balls. Head over the ball, drive smoothly — don't hit across the line."],
-  ["Cover drives — ten deliveries. Pick the right ball, weight forward, open the face and drive through the covers.",
-   "Cover drives now. Ten balls. This is about timing, not power — get into position early and let the bat flow.",
+   "Straight drives next. Ten deliveries â€” timing is everything here. Let it come to you, get set, full follow-through.",
+   "Here come the straight drives. Ten balls. Head over the ball, drive smoothly â€” don't hit across the line."],
+  ["Cover drives â€” ten deliveries. Pick the right ball, weight forward, open the face and drive through the covers.",
+   "Cover drives now. Ten balls. This is about timing, not power â€” get into position early and let the bat flow.",
    "Ten cover drives. Keep your head over the ball, select the right length, and drive with control through the off side.",
-   "Cover drives. Ten balls. Weight forward, full face of the bat — drive smoothly, don't force it."],
-  ["Cut shots — ten deliveries. Be patient, wait for it short and wide, then rock back and cut decisively.",
-   "Cut shots. Ten balls. Don't play too early — get into position, watch it onto the bat, and cut hard.",
+   "Cover drives. Ten balls. Weight forward, full face of the bat â€” drive smoothly, don't force it."],
+  ["Cut shots â€” ten deliveries. Be patient, wait for it short and wide, then rock back and cut decisively.",
+   "Cut shots. Ten balls. Don't play too early â€” get into position, watch it onto the bat, and cut hard.",
    "Ten cut shots. Back and across, wait for the right ball, then fully commit to the cut.",
-   "Here come the cut shots. Ten balls. Short and wide — rock back, stay balanced, and cut through the off side."],
-  ["Pull shots — ten deliveries. Pick up the length early, back foot, and pull through — roll the wrists.",
-   "Pull shots now. Ten balls. Short-pitched deliveries — get in line early, high elbow, and pull with control.",
-   "Ten pull shots. Back foot, pick up the length quickly, and pull with conviction — don't flinch.",
+   "Here come the cut shots. Ten balls. Short and wide â€” rock back, stay balanced, and cut through the off side."],
+  ["Pull shots â€” ten deliveries. Pick up the length early, back foot, and pull through â€” roll the wrists.",
+   "Pull shots now. Ten balls. Short-pitched deliveries â€” get in line early, high elbow, and pull with control.",
+   "Ten pull shots. Back foot, pick up the length quickly, and pull with conviction â€” don't flinch.",
    "Pull shots. Ten balls. Early movement back and across, watch it carefully, then pull through with a full swing."],
-  ["And finally — sweep shots. Ten deliveries to finish. Get low, pad forward, head over the ball, and sweep with control.",
-   "Last shot — the sweep. Ten balls. Commit fully, get into a low position early, and sweep with a smooth arc.",
+  ["And finally â€” sweep shots. Ten deliveries to finish. Get low, pad forward, head over the ball, and sweep with control.",
+   "Last shot â€” the sweep. Ten balls. Commit fully, get into a low position early, and sweep with a smooth arc.",
    "Sweep shots to close the session. Ten deliveries. Get down quickly, keep your head still, and sweep through it.",
-   "Final shot — the sweep. Ten balls. Get into position early, head over the ball — sweep with conviction."]
+   "Final shot â€” the sweep. Ten balls. Get into position early, head over the ball â€” sweep with conviction."]
 ];
 
 const SESSION_END_PHRASES=(score,pct)=>{
-  if(pct>=85)return`Session complete. ${score} out of six hundred — ${pct} percent. That's an excellent result. Really well done.`;
-  if(pct>=70)return`Session finished. ${score} out of six hundred — ${pct} percent. A solid performance overall. Some clear strengths to build on there.`;
-  if(pct>=50)return`Session complete. ${score} out of six hundred — ${pct} percent. A decent effort with some good moments. The breakdown will highlight where to focus next.`;
-  return`Session done. ${score} out of six hundred — ${pct} percent. Plenty of work ahead, but that's exactly what these sessions are for. Review the breakdown and target those weaker areas.`;
+  if(pct>=85)return`Session complete. ${score} out of six hundred â€” ${pct} percent. That's an excellent result. Really well done.`;
+  if(pct>=70)return`Session finished. ${score} out of six hundred â€” ${pct} percent. A solid performance overall. Some clear strengths to build on there.`;
+  if(pct>=50)return`Session complete. ${score} out of six hundred â€” ${pct} percent. A decent effort with some good moments. The breakdown will highlight where to focus next.`;
+  return`Session done. ${score} out of six hundred â€” ${pct} percent. Plenty of work ahead, but that's exactly what these sessions are for. Review the breakdown and target those weaker areas.`;
 };
 
 function pickPhrase(arr){return arr[Math.floor(Math.random()*arr.length)];}
@@ -3073,7 +3086,7 @@ function announceSessionComplete(total){speak(SESSION_END_PHRASES(total,Math.rou
 async function exportResultsPDF(){
   const btn=document.getElementById('pdf-btn');
   const origText=btn.innerHTML;
-  btn.innerHTML='⏳ Generating…';
+  btn.innerHTML='â³ Generatingâ€¦';
   btn.style.opacity='0.6';
   btn.disabled=true;
 
@@ -3083,7 +3096,7 @@ async function exportResultsPDF(){
     const PW=210, PH=297;
     const margin=14, col=PW-margin*2;
 
-    // ── Pull live data ─────────────────────────────────────────────────────
+    // â”€â”€ Pull live data â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
     const playerKey=document.getElementById('res-player').textContent;
     const sessionTag=document.getElementById('res-session-tag').textContent;
     const totalScore=document.getElementById('res-total').textContent;
@@ -3096,7 +3109,7 @@ async function exportResultsPDF(){
 
     let y=0;
 
-    // ── 1. Dark header band ────────────────────────────────────────────────
+    // â”€â”€ 1. Dark header band â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
     doc.setFillColor(10,25,12);
     doc.rect(0,0,PW,38,'F');
 
@@ -3129,7 +3142,7 @@ async function exportResultsPDF(){
     doc.setTextColor(170,200,170);
     doc.text(sessionTag,PW-margin,19.5,{align:'right'});
 
-    // ── 2. Score banner ────────────────────────────────────────────────────
+    // â”€â”€ 2. Score banner â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
     y=38;
     doc.setFillColor(18,40,18);
     doc.rect(0,y,PW,20,'F');
@@ -3161,7 +3174,7 @@ async function exportResultsPDF(){
     doc.setTextColor(100,130,100);
     doc.text('Generated: '+new Date().toLocaleDateString('en-ZA',{day:'numeric',month:'short',year:'numeric'}),PW-margin,y+14,{align:'right'});
 
-    // ── 3. Shot breakdown table ────────────────────────────────────────────
+    // â”€â”€ 3. Shot breakdown table â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
     y=62;
     const sectionTitle=(title)=>{
       doc.setFillColor(22,50,22);
@@ -3220,7 +3233,7 @@ async function exportResultsPDF(){
         } else {
           doc.setTextColor(70,90,70);
         }
-        doc.text(cnt>0?cnt+'':'—',cols[2+ci],y,{align:'center'});
+        doc.text(cnt>0?cnt+'':'â€”',cols[2+ci],y,{align:'center'});
       });
 
       // Progress bar
@@ -3235,13 +3248,13 @@ async function exportResultsPDF(){
       y+=7;
     });
 
-    // ── 4. Ball score legend ───────────────────────────────────────────────
+    // â”€â”€ 4. Ball score legend â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
     y+=2;
     doc.setFont('helvetica','normal');doc.setFontSize(6);doc.setTextColor(90,120,90);
-    doc.text('Score key — 0:Miss  1:Edge  4:Hit/no control  6:Executed limited  8:Good shot  10:Perfect',margin,y);
+    doc.text('Score key â€” 0:Miss  1:Edge  4:Hit/no control  6:Executed limited  8:Good shot  10:Perfect',margin,y);
     y+=6;
 
-    // ── 5. Charts ─────────────────────────────────────────────────────────
+    // â”€â”€ 5. Charts â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
     // Capture each Chart.js canvas as a PNG and embed
     const addChart=(canvasId,title,height)=>{
       const canvas=document.getElementById(canvasId);
@@ -3264,7 +3277,7 @@ async function exportResultsPDF(){
     if(y+62>PH-12){doc.addPage();y=14;}
     addChart('resHistogram','Shot Histogram',55);
 
-    // ── 6. Footer ─────────────────────────────────────────────────────────
+    // â”€â”€ 6. Footer â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
     const pageCount=doc.getNumberOfPages();
     for(let pg=1;pg<=pageCount;pg++){
       doc.setPage(pg);
@@ -3272,18 +3285,18 @@ async function exportResultsPDF(){
       doc.line(margin,PH-10,PW-margin,PH-10);
       doc.setFont('helvetica','normal');doc.setFontSize(6.5);
       doc.setTextColor(100,130,100);
-      doc.text('Master Stroke · Cricket Performance Assessment',margin,PH-6);
+      doc.text('Master Stroke Â· Cricket Performance Assessment',margin,PH-6);
       doc.text('Page '+pg+' of '+pageCount,PW-margin,PH-6,{align:'right'});
     }
 
-    // ── 7. Save / share ───────────────────────────────────────────────────
+    // â”€â”€ 7. Save / share â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
     const fname='MasterStroke_'+playerKey.replace(/\s+/g,'_')+'_'+sessionTag.replace(/[^a-zA-Z0-9]+/g,'_')+'.pdf';
     doc.save(fname);
-    toast('📄 PDF saved to Downloads');
+    toast('ðŸ“„ PDF saved to Downloads');
 
   }catch(err){
     console.error('PDF export failed:',err);
-    toast('PDF failed — '+err.message);
+    toast('PDF failed â€” '+err.message);
   } finally {
     btn.innerHTML=origText;
     btn.style.opacity='1';
@@ -3321,7 +3334,7 @@ document.addEventListener('click',function unlock(){
   document.removeEventListener('click',unlock);
 },{once:true});
 
-// Load voices — Chrome loads them async
+// Load voices â€” Chrome loads them async
 if(window.speechSynthesis){
   window.speechSynthesis.onvoiceschanged=()=>{ window.speechSynthesis.getVoices(); };
 }
@@ -3345,7 +3358,7 @@ let scanStream=null;
 
 const P2P_CHUNK=65536; // 64KB data channel chunks
 
-// ─── UTILITIES ───────────────────────────────────────────────────────────────
+// â”€â”€â”€ UTILITIES â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 function genSessionId(){
   const chars='ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
   let id='';for(let i=0;i<6;i++)id+=chars[Math.floor(Math.random()*chars.length)];
@@ -3370,7 +3383,7 @@ function setQRStatus(state,msg){
   txt.textContent=msg;
 }
 
-// ─── CAMERA CHOICE ────────────────────────────────────────────────────────────
+// â”€â”€â”€ CAMERA CHOICE â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 function chooseCameraLocal(){
   openCameraSetup();
 }
@@ -3389,17 +3402,17 @@ function cancelP2P(){
   p2pSessionId=null;p2pRole=null;
 }
 
-// ─── PHONE 1 (SCORING HOST): generate peer, show QR ─────────────────────────
+// â”€â”€â”€ PHONE 1 (SCORING HOST): generate peer, show QR â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 function startQRHost(){
   p2pSessionId=genSessionId();
   p2pRole='host';
   const peerId=p2pPeerId('h',p2pSessionId);
 
   document.getElementById('qr-session-meta').textContent=
-    currentSession.playerKey+' · Session '+currentSession.sessionNum;
+    currentSession.playerKey+' Â· Session '+currentSession.sessionNum;
   document.getElementById('qr-session-code').textContent=p2pSessionId;
   document.getElementById('qr-code-div').innerHTML='';
-  setQRStatus('waiting','Waiting for camera phone…');
+  setQRStatus('waiting','Waiting for camera phoneâ€¦');
   showScreen('screen-qr-host');
 
   // Build PeerJS peer
@@ -3412,12 +3425,12 @@ function startQRHost(){
       ]}
     });
   }catch(e){
-    setQRStatus('error','PeerJS not loaded — check connection');
+    setQRStatus('error','PeerJS not loaded â€” check connection');
     return;
   }
 
   p2pPeer.on('open',()=>{
-    // Generate QR — encode JSON payload so camera phone knows both IDs
+    // Generate QR â€” encode JSON payload so camera phone knows both IDs
     const payload=JSON.stringify({sid:p2pSessionId,host:peerId,v:1});
     try{
       new QRCode(document.getElementById('qr-code-div'),{
@@ -3427,7 +3440,7 @@ function startQRHost(){
         correctLevel:QRCode.CorrectLevel.M
       });
     }catch(e){
-      // QRCode lib not loaded — show text code as fallback
+      // QRCode lib not loaded â€” show text code as fallback
       document.getElementById('qr-code-div').innerHTML=
         '<div style="padding:20px;font-family:monospace;font-size:1.1rem;color:#000;word-break:break-all;max-width:200px">'+payload+'</div>';
     }
@@ -3438,7 +3451,7 @@ function startQRHost(){
     p2pCall=call;
     call.answer(); // no outgoing stream from scoring phone
     call.on('stream',remoteStream=>{
-      setQRStatus('connected','Camera phone connected — streaming');
+      setQRStatus('connected','Camera phone connected â€” streaming');
       // Attach remote stream to scoring screen preview
       const preview=document.getElementById('sc-cam-live');
       preview.srcObject=remoteStream;
@@ -3449,10 +3462,10 @@ function startQRHost(){
       setTimeout(()=>{
         renderScoringScreen();
         showScreen('screen-scoring');
-        // Recording happens on camera phone — set badge to "LIVE"
+        // Recording happens on camera phone â€” set badge to "LIVE"
         const badge=document.getElementById('sc-rec-badge');
         if(badge){badge.style.display='inline-flex';badge.innerHTML='<div class="rec-dot"></div>LIVE';}
-        showP2PStrip('📡 Camera phone streaming','streaming');
+        showP2PStrip('ðŸ“¡ Camera phone streaming','streaming');
         setTimeout(()=>{
           speak('Session '+currentSession.sessionNum+' starting. '+currentSession.playerKey+'. '+SHOTS[0].name+'s. Ten deliveries.',true);
         },600);
@@ -3470,16 +3483,16 @@ function startQRHost(){
   });
 
   p2pPeer.on('error',err=>{
-    setQRStatus('error','Error: '+err.type+' — check WiFi/data');
+    setQRStatus('error','Error: '+err.type+' â€” check WiFi/data');
   });
 }
 
 // Phone 1 receives data from camera phone
-let hdChunkMap={};  // seq→ArrayBuffer map for ordered reassembly
+let hdChunkMap={};  // seqâ†’ArrayBuffer map for ordered reassembly
 function handleHostData(d){
   if(d.type==='video-meta'){
     hdReceiveMeta=d; hdReceiveChunks=[]; hdChunkMap={}; hdBytesReceived=0;
-    toast('📥 Receiving HD video ('+Math.round(d.size/1048576)+'MB)…');
+    toast('ðŸ“¥ Receiving HD video ('+Math.round(d.size/1048576)+'MB)â€¦');
   } else if(d.type==='video-chunk'){
     // Store by sequence number so reassembly is order-independent
     const buf = d.chunk instanceof ArrayBuffer ? d.chunk : d.chunk.buffer || d.chunk;
@@ -3487,7 +3500,7 @@ function handleHostData(d){
     hdBytesReceived+=(buf.byteLength||0);
     if(hdReceiveMeta){
       const pct=Math.round(hdBytesReceived/hdReceiveMeta.size*100);
-      showP2PStrip('⬇ Receiving HD video: '+pct+'%','uploading');
+      showP2PStrip('â¬‡ Receiving HD video: '+pct+'%','uploading');
     }
     // ACK immediately so sender can pipeline next chunk
     if(p2pDataConn&&p2pDataConn.open) p2pDataConn.send({type:'chunk-ack',seq:d.seq});
@@ -3507,7 +3520,7 @@ async function assembleAndSaveHD(){
   // Use the session that was active when the session ended, not just the last index
   const p=DB.players[currentPlayerKey];
   if(p&&p.sessions&&p.sessions.length>0){
-    // Find the correct session — it's the one whose sessionNum matches what was signalled
+    // Find the correct session â€” it's the one whose sessionNum matches what was signalled
     const idx=hdReceiveMeta.sessionIdx!==undefined
       ? hdReceiveMeta.sessionIdx
       : p.sessions.length-1;
@@ -3516,7 +3529,7 @@ async function assembleAndSaveHD(){
     p.sessions[idx].hasVideo=true;
     saveData(DB);
     const mb=Math.round(blob.size/1048576);
-    toast('✅ HD video saved — '+mb+'MB · tap Video Analysis to review');
+    toast('âœ… HD video saved â€” '+mb+'MB Â· tap Video Analysis to review');
     showP2PStrip('HD video saved ('+mb+'MB)','streaming');
     // If results screen is open for this session, refresh the video button
     const resultsScreen=document.getElementById('screen-results');
@@ -3537,7 +3550,7 @@ async function assembleAndSaveHD(){
         videoEl.currentTime=prevTime;
         if(wasPlaying)videoEl.play().catch(()=>{});
         document.getElementById('vid-time-dur').textContent=fmtTime(videoEl.duration);
-        toast('📹 HD video loaded — '+mb+'MB');
+        toast('ðŸ“¹ HD video loaded â€” '+mb+'MB');
       };
     }
   }
@@ -3556,13 +3569,13 @@ function signalSessionEndToCamera(){
   }
 }
 
-// ─── PHONE 2 (CAMERA CLIENT): enter camera mode ──────────────────────────────
+// â”€â”€â”€ PHONE 2 (CAMERA CLIENT): enter camera mode â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 function enterCameraClientMode(){
   p2pRole='client';
   showScreen('screen-cam-client');
   document.getElementById('cam-client-title').textContent='Scan QR Code';
   document.getElementById('cam-client-sub').textContent='Point at the scoring phone QR code';
-  document.getElementById('cam-client-status').textContent='Starting camera for QR scan…';
+  document.getElementById('cam-client-status').textContent='Starting camera for QR scanâ€¦';
   document.getElementById('scanner-view').style.display='block';
   document.getElementById('cam-client-view').style.display='none';
   document.getElementById('cam-client-rec').style.display='none';
@@ -3628,12 +3641,12 @@ function onQRScanned(raw){
   if(scanAnimFrame){cancelAnimationFrame(scanAnimFrame);scanAnimFrame=null;}
   try{
     const data=JSON.parse(raw);
-    if(!data.sid||!data.host){document.getElementById('cam-client-status').textContent='Invalid QR — try again';return;}
-    document.getElementById('cam-client-status').textContent='QR scanned ✓ — connecting to session '+data.sid+'…';
+    if(!data.sid||!data.host){document.getElementById('cam-client-status').textContent='Invalid QR â€” try again';return;}
+    document.getElementById('cam-client-status').textContent='QR scanned âœ“ â€” connecting to session '+data.sid+'â€¦';
     stopScanStream();
     connectAsCamera(data.sid,data.host);
   }catch(e){
-    document.getElementById('cam-client-status').textContent='Could not read QR — try again';
+    document.getElementById('cam-client-status').textContent='Could not read QR â€” try again';
     // resume scanning
     beginFrameScan(document.getElementById('scanner-video'));
   }
@@ -3647,7 +3660,7 @@ async function connectAsCamera(sid,hostPeerId){
   p2pSessionId=sid;
   const myId=p2pPeerId('c',sid)+'-'+Math.floor(Math.random()*9999);
   document.getElementById('cam-client-title').textContent='Session '+sid;
-  document.getElementById('cam-client-sub').textContent='Connecting…';
+  document.getElementById('cam-client-sub').textContent='Connectingâ€¦';
 
   try{
     p2pPeer=new Peer(myId,{
@@ -3657,7 +3670,7 @@ async function connectAsCamera(sid,hostPeerId){
       ]}
     });
   }catch(e){
-    document.getElementById('cam-client-status').textContent='PeerJS not available — check connection';
+    document.getElementById('cam-client-status').textContent='PeerJS not available â€” check connection';
     return;
   }
 
@@ -3680,7 +3693,7 @@ async function connectAsCamera(sid,hostPeerId){
     prev.srcObject=mainStream;prev.play().catch(()=>{});
 
     // Create a 720p clone stream for streaming (leaves recording at 1080p)
-    // We apply bandwidth constraints to the sender via SDP munging — PeerJS handles this
+    // We apply bandwidth constraints to the sender via SDP munging â€” PeerJS handles this
     // via the call options. We'll constrain the track after call is made.
 
     // Start HD recording locally on camera phone
@@ -3694,9 +3707,9 @@ async function connectAsCamera(sid,hostPeerId){
     // Open data connection to receive session-end + send HD video
     p2pDataConn=p2pPeer.connect(hostPeerId);
     p2pDataConn.on('open',()=>{
-      document.getElementById('cam-client-status').textContent='Connected — streaming to scoring phone';
-      document.getElementById('cam-client-title').textContent='Live — Session '+sid;
-      document.getElementById('cam-client-sub').textContent='Recording HD · Streaming 720p to scoring phone';
+      document.getElementById('cam-client-status').textContent='Connected â€” streaming to scoring phone';
+      document.getElementById('cam-client-title').textContent='Live â€” Session '+sid;
+      document.getElementById('cam-client-sub').textContent='Recording HD Â· Streaming 720p to scoring phone';
       document.getElementById('cam-client-rec').style.display='inline-flex';
     });
     p2pDataConn.on('data',d=>handleClientData(d));
@@ -3708,7 +3721,7 @@ async function connectAsCamera(sid,hostPeerId){
         const params=sender.getParameters();
         if(params.encodings&&params.encodings.length>0){
           params.encodings[0].maxBitrate=2500000; // 2.5Mbps for 720p
-          params.encodings[0].scaleResolutionDownBy=1.5; // 1080p÷1.5≈720p
+          params.encodings[0].scaleResolutionDownBy=1.5; // 1080pÃ·1.5â‰ˆ720p
           sender.setParameters(params).catch(()=>{});
         }
       }
@@ -3728,7 +3741,7 @@ function startCameraClientRecording(stream){
     hdRecorder=new MediaRecorder(stream,mimeType?{mimeType,videoBitsPerSecond:8000000}:{});
     hdRecorder.ondataavailable=e=>{if(e.data&&e.data.size>0)hdChunks.push(e.data);};
     hdRecorder.start(1000);
-    document.getElementById('cam-stream-stat').textContent='📡 Streaming 720p';
+    document.getElementById('cam-stream-stat').textContent='ðŸ“¡ Streaming 720p';
   }catch(e){
     console.warn('HD recorder failed',e);
   }
@@ -3736,14 +3749,14 @@ function startCameraClientRecording(stream){
 
 // Camera phone receives data from scoring phone
 let hdSendSessionIdx=0;
-let hdWindowSize=4;     // pipeline — send up to 4 chunks before waiting for ACKs
+let hdWindowSize=4;     // pipeline â€” send up to 4 chunks before waiting for ACKs
 let hdNextSeqToSend=0;
 let hdLastAckedSeq=-1;
 
 function handleClientData(d){
   if(d.type==='session-end'){
     hdSendSessionIdx=d.sessionIdx||0;
-    document.getElementById('cam-client-sub').textContent='Session ended — saving and uploading HD video…';
+    document.getElementById('cam-client-sub').textContent='Session ended â€” saving and uploading HD videoâ€¦';
     stopClientRecordingAndUpload();
   } else if(d.type==='chunk-ack'){
     hdLastAckedSeq=d.seq;
@@ -3773,12 +3786,12 @@ async function stopClientRecordingAndUpload(){
   const totalChunks=Math.ceil(hdSendBlob.size/P2P_CHUNK);
 
   document.getElementById('cam-client-title').textContent='Uploading HD Video';
-  document.getElementById('cam-client-sub').textContent='Sending '+sizeMB+'MB to scoring phone…';
+  document.getElementById('cam-client-sub').textContent='Sending '+sizeMB+'MB to scoring phoneâ€¦';
   document.getElementById('cam-client-rec').style.display='none';
   document.getElementById('cam-client-view').style.display='none';
   document.getElementById('scanner-view').style.display='none';
   document.getElementById('upload-bar').style.display='block';
-  document.getElementById('cam-client-status').textContent='Uploading — keep both phones on WiFi…';
+  document.getElementById('cam-client-status').textContent='Uploading â€” keep both phones on WiFiâ€¦';
 
   if(p2pDataConn&&p2pDataConn.open){
     // Send metadata first, including sessionIdx so scoring phone saves to correct slot
@@ -3793,7 +3806,7 @@ async function stopClientRecordingAndUpload(){
     // Seed the pipeline
     fillSendWindow();
   } else {
-    document.getElementById('cam-client-status').textContent='Upload failed — data connection lost';
+    document.getElementById('cam-client-status').textContent='Upload failed â€” data connection lost';
   }
 }
 
@@ -3829,7 +3842,7 @@ function sendChunkAtSeq(seq){
       if(seq===totalChunks-1){
         setTimeout(()=>{
           if(p2pDataConn&&p2pDataConn.open)p2pDataConn.send({type:'video-done'});
-          document.getElementById('cam-client-status').textContent='Upload complete ✓ — you can close this now';
+          document.getElementById('cam-client-status').textContent='Upload complete âœ“ â€” you can close this now';
           document.getElementById('upload-fill').style.width='100%';
           document.getElementById('upload-label').textContent='Upload complete';
         },300);
@@ -3850,7 +3863,7 @@ function stopCameraClient(){
   p2pDataConn=null;p2pCall=null;
 }
 
-// ─── HOOK INTO EXISTING SESSION END ──────────────────────────────────────────
+// â”€â”€â”€ HOOK INTO EXISTING SESSION END â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 // Patch saveAndShowResults to signal camera phone
 const _origSaveAndShow=saveAndShowResults;
 saveAndShowResults=function(){
@@ -3866,17 +3879,17 @@ initSpeech();
 // renderHome() and showScreen called by bootApp() inside the intro window.load handler
 </script>
 
-<!-- ═══ MASTER STROKE — CINEMATIC INTRO (fixed overlay, canvas-only) ═══ -->
-<div id="ms-intro" style="position:fixed;inset:0;z-index:9999;background:#000;overflow:hidden;cursor:pointer" aria-label="Master Stroke intro — tap to skip">
+<!-- â•â•â• MASTER STROKE â€” CINEMATIC INTRO (fixed overlay, canvas-only) â•â•â• -->
+<div id="ms-intro" style="position:fixed;inset:0;z-index:9999;background:#000;overflow:hidden;cursor:pointer" aria-label="Master Stroke intro â€” tap to skip">
   <canvas id="ms-intro-cv" style="position:absolute;inset:0;width:100%;height:100%;display:block"></canvas>
 </div>
 
 <script>
-// ─────────────────────────────────────────────────────────────────────────────
-// MASTER STROKE — CINEMATIC INTRO  (pure canvas, position:fixed overlay)
+// â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// MASTER STROKE â€” CINEMATIC INTRO  (pure canvas, position:fixed overlay)
 // All rendering on canvas: no .screen class, no flex/height cascade needed.
 // Starts on window 'load' so fonts (Bebas Neue) and layout are guaranteed ready.
-// ─────────────────────────────────────────────────────────────────────────────
+// â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 window.addEventListener('load', function startIntro() {
 
   const overlay = document.getElementById('ms-intro');
@@ -3887,7 +3900,7 @@ window.addEventListener('load', function startIntro() {
   let W, H, raf, done = false, startTS = null;
   let lastTS = 0;
 
-  // ── size canvas to real device pixels ───────────────────────────────────
+  // â”€â”€ size canvas to real device pixels â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
   function resize() {
     const dpr = window.devicePixelRatio || 1;
     W = window.innerWidth;
@@ -3899,11 +3912,11 @@ window.addEventListener('load', function startIntro() {
   resize();
   window.addEventListener('resize', resize);
 
-  // ── tap / click to skip ─────────────────────────────────────────────────
+  // â”€â”€ tap / click to skip â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
   overlay.addEventListener('click',  function() { if (!done) exitIntro(); }, { once: true });
   overlay.addEventListener('touchend', function(e) { e.preventDefault(); if (!done) exitIntro(); }, { once: true });
 
-  // ── PARTICLES ────────────────────────────────────────────────────────────
+  // â”€â”€ PARTICLES â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
   const PARTS = 200;
   const P = Array.from({ length: PARTS }, () => ({
     x: Math.random() * W,
@@ -3915,7 +3928,7 @@ window.addEventListener('load', function startIntro() {
     gold: Math.random() > 0.55
   }));
 
-  // ── CRICKET BALL BEZIER ──────────────────────────────────────────────────
+  // â”€â”€ CRICKET BALL BEZIER â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
   function ballAt(t) {
     // P0 = off-screen bottom-left, P1 = upper-centre-left, P2 = centre
     const x0=-60, y0=H+60, x1=W*0.28, y1=H*0.30, x2=W*0.50, y2=H*0.46;
@@ -3947,7 +3960,7 @@ window.addEventListener('load', function startIntro() {
     cx.fillStyle = `rgba(255,255,255,${a * 0.32})`; cx.fill();
   }
 
-  // ── IMPACT BURST ─────────────────────────────────────────────────────────
+  // â”€â”€ IMPACT BURST â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
   let burstT = -1, burstX = 0, burstY = 0;
 
   function drawBurst(x, y, t) {
@@ -3973,7 +3986,7 @@ window.addEventListener('load', function startIntro() {
     cx.fillStyle = gr; cx.fill();
   }
 
-  // ── VIGNETTE ─────────────────────────────────────────────────────────────
+  // â”€â”€ VIGNETTE â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
   function drawVignette() {
     const g = cx.createRadialGradient(W/2, H/2, H*0.22, W/2, H/2, H*0.88);
     g.addColorStop(0, 'rgba(0,0,0,0)');
@@ -3981,7 +3994,7 @@ window.addEventListener('load', function startIntro() {
     cx.fillStyle = g; cx.fillRect(0, 0, W, H);
   }
 
-  // ── TEXT DRAWING ─────────────────────────────────────────────────────────
+  // â”€â”€ TEXT DRAWING â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
   // We draw all text to canvas so there are zero CSS / font / layout deps.
   function titleGrad(yBase, h) {
     const g = cx.createLinearGradient(0, yBase - h, 0, yBase + h*0.2);
@@ -3993,15 +4006,15 @@ window.addEventListener('load', function startIntro() {
     return g;
   }
 
-  // ── LETTERBOX BARS ────────────────────────────────────────────────────────
+  // â”€â”€ LETTERBOX BARS â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
   let barH = 0, barTargH = 0;
 
-  // ── ANIMATION STATE ───────────────────────────────────────────────────────
+  // â”€â”€ ANIMATION STATE â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
   // elapsed: time in seconds since start
-  // Each phase: [startT, endT, 0→1 progress]
+  // Each phase: [startT, endT, 0â†’1 progress]
   function phase(e, s, d) { return Math.max(0, Math.min(1, (e - s) / d)); }
 
-  // ── MAIN RENDER ──────────────────────────────────────────────────────────
+  // â”€â”€ MAIN RENDER â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
   function draw(ts) {
     if (done) return;
     if (!startTS) startTS = ts;
@@ -4009,11 +4022,11 @@ window.addEventListener('load', function startIntro() {
     lastTS = ts;
     const e = (ts - startTS) / 1000; // elapsed seconds
 
-    // ── Clear ──
+    // â”€â”€ Clear â”€â”€
     cx.clearRect(0, 0, W, H);
     cx.fillStyle = '#040c04'; cx.fillRect(0, 0, W, H);
 
-    // ── Cricket field materialises ──
+    // â”€â”€ Cricket field materialises â”€â”€
     const fieldA = phase(e, 0.5, 1.2);
     if (fieldA > 0) {
       const fg = cx.createRadialGradient(W/2, H/2, H*0.03, W/2, H/2, H*0.82);
@@ -4037,7 +4050,7 @@ window.addEventListener('load', function startIntro() {
       cx.restore();
     }
 
-    // ── Particles ──
+    // â”€â”€ Particles â”€â”€
     P.forEach(p => {
       p.x += p.vx; p.y += p.vy;
       if (p.x < 0) p.x = W; else if (p.x > W) p.x = 0;
@@ -4049,7 +4062,7 @@ window.addEventListener('load', function startIntro() {
       cx.fill();
     });
 
-    // ── Letterbox bars ──
+    // â”€â”€ Letterbox bars â”€â”€
     if (e > 0.3) {
       barTargH = H * 0.115;
       barH = Math.min(barTargH, barH + barTargH * dt * 5.5);
@@ -4064,7 +4077,7 @@ window.addEventListener('load', function startIntro() {
       cx.fillRect(0, H - barH, W, 1);
     }
 
-    // ── Ball trajectory (active 0.7s → 1.5s) ──
+    // â”€â”€ Ball trajectory (active 0.7s â†’ 1.5s) â”€â”€
     if (e > 0.7 && !ballActive) ballActive = true;
     if (ballActive) {
       ballT = Math.min(1, (e - 0.7) / 0.80);
@@ -4086,14 +4099,14 @@ window.addEventListener('load', function startIntro() {
       }
     }
 
-    // ── Impact burst (at 1.5s) ──
+    // â”€â”€ Impact burst (at 1.5s) â”€â”€
     if (e >= 1.50 && burstT < 0) { burstT = 0; const p2 = ballAt(1); burstX = p2.x; burstY = p2.y; }
     if (burstT >= 0 && burstT <= 1) {
       burstT += dt * 1.7;
       drawBurst(burstX, burstY, burstT);
     }
 
-    // ── Light beam from top after impact ──
+    // â”€â”€ Light beam from top after impact â”€â”€
     if (e > 1.5) {
       const ba = Math.min(0.09, (e - 1.5) * 0.055);
       const bg2 = cx.createLinearGradient(W/2, barH, W/2, H - barH);
@@ -4106,9 +4119,9 @@ window.addEventListener('load', function startIntro() {
       cx.closePath(); cx.fillStyle = bg2; cx.fill();
     }
 
-    // ── TITLE TEXT ──
+    // â”€â”€ TITLE TEXT â”€â”€
     // "MASTER STROKE" slides in from the sides
-    const titleP = phase(e, 1.72, 0.62); // 0→1 over 0.62s
+    const titleP = phase(e, 1.72, 0.62); // 0â†’1 over 0.62s
     if (titleP > 0) {
       const fontSize = Math.min(W * 0.145, H * 0.125, 96);
       cx.font = `normal ${fontSize}px 'Bebas Neue', sans-serif`;
@@ -4149,7 +4162,7 @@ window.addEventListener('load', function startIntro() {
       cx.restore();
     }
 
-    // ── DIVIDER LINE ──
+    // â”€â”€ DIVIDER LINE â”€â”€
     const divP = phase(e, 2.45, 0.45);
     if (divP > 0) {
       const divY  = H * 0.51;
@@ -4165,7 +4178,7 @@ window.addEventListener('load', function startIntro() {
       cx.strokeStyle = dg; cx.lineWidth = 1.5; cx.stroke();
     }
 
-    // ── SUBTITLE TEXT ──
+    // â”€â”€ SUBTITLE TEXT â”€â”€
     const subP = phase(e, 2.72, 0.55);
     if (subP > 0) {
       const subSize = Math.min(W * 0.038, 15);
@@ -4188,7 +4201,7 @@ window.addEventListener('load', function startIntro() {
       cx.globalAlpha = 1;
     }
 
-    // ── TAP TO ENTER PULSE ──
+    // â”€â”€ TAP TO ENTER PULSE â”€â”€
     if (e > 3.3) {
       const pulseA = 0.28 + 0.27 * Math.sin((e - 3.3) * Math.PI * 0.85);
       const tapSize = Math.min(W * 0.025, 10);
@@ -4232,31 +4245,32 @@ window.addEventListener('load', function startIntro() {
 }); // end window.load
 </script>
 
-<!-- ═══ MASTER STROKE AUTH LAYER (inlined) ═══ -->
+<!-- â•â•â• MASTER STROKE AUTH LAYER (inlined) â•â•â• -->
 <script>
-/* ═══════════════════════════════════════════════════════════════════════════
-   MASTER STROKE — BACKEND INTEGRATION LAYER
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+   MASTER STROKE â€” BACKEND INTEGRATION LAYER
    Drop this <script> block into masterstroke.html just before </body>
    It wraps the app with auth, syncs data to/from the server, and adds
    an Admin Panel for licence management.
-   ═══════════════════════════════════════════════════════════════════════════ */
+   â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
 
-// ── CONFIG ───────────────────────────────────────────────────────────────
-const MS_API  = window.MS_API_URL || window.location.origin;
-const GCID    = window.GOOGLE_CLIENT_ID || 'YOUR_GOOGLE_CLIENT_ID';
+// â”€â”€ CONFIG â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// Read from window so the config block at the top of the file always wins
+const MS_API  = ()=> window.MS_API_URL || window.location.origin;
+const GCID    = ()=> window.GOOGLE_CLIENT_ID || '';
 
-// ── STATE ────────────────────────────────────────────────────────────────
+// â”€â”€ STATE â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 let msToken    = localStorage.getItem('ms_token') || null;
 let msUser     = JSON.parse(localStorage.getItem('ms_user') || 'null');
 let msLicence  = JSON.parse(localStorage.getItem('ms_lic')  || 'null');
 
-// ── API HELPER ───────────────────────────────────────────────────────────
+// â”€â”€ API HELPER â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 async function msApi(method, path, body, isFormData) {
   const headers = {};
   if (msToken) headers['Authorization'] = 'Bearer ' + msToken;
   if (!isFormData) headers['Content-Type'] = 'application/json';
 
-  const res = await fetch(MS_API + '/api' + path, {
+  const res = await fetch(MS_API() + '/api' + path, {
     method,
     headers,
     body: body ? (isFormData ? body : JSON.stringify(body)) : undefined
@@ -4266,7 +4280,7 @@ async function msApi(method, path, body, isFormData) {
   return data;
 }
 
-// ── INJECT STYLES ────────────────────────────────────────────────────────
+// â”€â”€ INJECT STYLES â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 const authStyle = document.createElement('style');
 authStyle.textContent = `
 /* Auth overlay */
@@ -4333,7 +4347,7 @@ select.auth-input{background:#111f11}
 `;
 document.head.appendChild(authStyle);
 
-// ── AUTH OVERLAY HTML ────────────────────────────────────────────────────
+// â”€â”€ AUTH OVERLAY HTML â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 const authOverlayHTML = `
 <div id="ms-auth-overlay" style="display:none">
   <div class="auth-card">
@@ -4380,15 +4394,15 @@ const authOverlayHTML = `
       <p style="font-size:0.82rem;color:#8aa88a;margin-bottom:14px">Enter your email and we'll send a reset link.</p>
       <div class="auth-field"><label class="auth-label">Email</label><input class="auth-input" type="email" id="fp-email" placeholder="your@email.com"></div>
       <button class="auth-btn" onclick="msForgot()">Send Reset Link</button>
-      <div class="auth-footer-row" style="margin-top:12px"><span class="auth-link" onclick="msShowTab('login')">← Back to sign in</span></div>
+      <div class="auth-footer-row" style="margin-top:12px"><span class="auth-link" onclick="msShowTab('login')">â† Back to sign in</span></div>
     </div>
 
     <!-- VERIFY NOTICE -->
     <div id="form-verify" style="display:none;text-align:center">
-      <div style="font-size:2rem;margin-bottom:10px">📧</div>
+      <div style="font-size:2rem;margin-bottom:10px">ðŸ“§</div>
       <p style="color:#c0d0c0;font-size:0.88rem;line-height:1.6">Check your email for a verification link. Click it to activate your account.</p>
       <button class="auth-btn" style="margin-top:16px" onclick="msResendVerify()">Resend Email</button>
-      <div class="auth-footer-row" style="margin-top:12px"><span class="auth-link" onclick="msShowTab('login')">← Back</span></div>
+      <div class="auth-footer-row" style="margin-top:12px"><span class="auth-link" onclick="msShowTab('login')">â† Back</span></div>
     </div>
 
   </div>
@@ -4396,7 +4410,7 @@ const authOverlayHTML = `
 
 <div id="ms-lic-banner" style="display:none">
   <span id="ms-lic-banner-text">Your licence has expired or is not active.</span>
-  <button onclick="document.getElementById('ms-lic-banner').style.display='none'">✕</button>
+  <button onclick="document.getElementById('ms-lic-banner').style.display='none'">âœ•</button>
 </div>
 
 <div id="ms-admin-panel"></div>
@@ -4404,7 +4418,7 @@ const authOverlayHTML = `
 
 document.body.insertAdjacentHTML('beforeend', authOverlayHTML);
 
-// ── Google Identity Services ─────────────────────────────────────────────
+// â”€â”€ Google Identity Services â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 const gisScript = document.createElement('script');
 gisScript.src = 'https://accounts.google.com/gsi/client';
 gisScript.async = true;
@@ -4413,7 +4427,7 @@ document.head.appendChild(gisScript);
 function msGoogleSignIn() {
   if (!window.google) { msShowMsg('Google Sign-In not loaded yet. Try again in a moment.', 'error'); return; }
   google.accounts.id.initialize({
-    client_id: GCID,
+    client_id: GCID(),
     callback: async (resp) => {
       try {
         msAuthBtn(true);
@@ -4425,7 +4439,7 @@ function msGoogleSignIn() {
   google.accounts.id.prompt();
 }
 
-// ── Auth UI helpers ───────────────────────────────────────────────────────
+// â”€â”€ Auth UI helpers â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 function msShowTab(tab) {
   ['login','register','forgot','verify'].forEach(t => {
     document.getElementById('form-'+t).style.display = t===tab?'block':'none';
@@ -4515,18 +4529,18 @@ function msLogout() {
   window.location.reload();
 }
 
-// ── Boot the app after successful auth ───────────────────────────────────
+// â”€â”€ Boot the app after successful auth â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 function msBootApp() {
   // Inject user chip into scoring topbar
   const topbarRight = document.querySelector('.scoring-header-row > div:last-child');
   if (topbarRight && msUser && !document.getElementById('ms-user-chip')) {
     const chip = document.createElement('div');
     chip.id = 'ms-user-chip';
-    chip.title = msUser.full_name + ' — click to sign out';
+    chip.title = msUser.full_name + ' â€” click to sign out';
     chip.onclick = () => { if(confirm('Sign out of Master Stroke?')) msLogout(); };
     chip.innerHTML = msUser.avatar_url
       ? `<img src="${msUser.avatar_url}" alt="">`
-      : `<span style="font-size:0.8rem">👤</span>`;
+      : `<span style="font-size:0.8rem">ðŸ‘¤</span>`;
     chip.innerHTML += `<span class="chip-name">${msUser.full_name.split(' ')[0]}</span>`;
     topbarRight.insertBefore(chip, topbarRight.firstChild);
   }
@@ -4545,7 +4559,7 @@ function msBootApp() {
     if (fab) {
       const adminBtn = document.createElement('button');
       adminBtn.style.cssText = 'position:fixed;bottom:calc(env(safe-area-inset-bottom,0px)+84px);right:20px;width:46px;height:46px;border-radius:50%;background:rgba(26,74,124,0.85);border:1px solid rgba(100,160,255,0.45);color:#8cf;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:1.1rem;box-shadow:0 4px 16px rgba(0,0,0,0.4);z-index:50';
-      adminBtn.textContent = '⚙';
+      adminBtn.textContent = 'âš™';
       adminBtn.title = 'Admin Panel';
       adminBtn.onclick = msOpenAdmin;
       document.body.appendChild(adminBtn);
@@ -4556,7 +4570,7 @@ function msBootApp() {
   msSyncFromServer();
 }
 
-// ── Server sync: pull players + sessions into local state ────────────────
+// â”€â”€ Server sync: pull players + sessions into local state â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 async function msSyncFromServer() {
   if (!msToken || !msLicence) return;
   try {
@@ -4583,7 +4597,7 @@ async function msSyncFromServer() {
   }
 }
 
-// ── Push session to server after scoring ────────────────────────────────
+// â”€â”€ Push session to server after scoring â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 const _origSaveCurrentSession = typeof saveCurrentSession === 'function' ? saveCurrentSession : null;
 
 async function msPushSession(playerName, sessionObj) {
@@ -4615,17 +4629,17 @@ async function msPushSession(playerName, sessionObj) {
   }
 }
 
-// ── ADMIN PANEL ───────────────────────────────────────────────────────────
+// â”€â”€ ADMIN PANEL â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 async function msOpenAdmin() {
   const panel = document.getElementById('ms-admin-panel');
   panel.style.display = 'block';
   panel.innerHTML = `
     <div class="admin-topbar">
-      <button onclick="document.getElementById('ms-admin-panel').style.display='none'" style="background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:8px;width:36px;height:36px;color:#e8f0e8;cursor:pointer;font-size:1.1rem">←</button>
+      <button onclick="document.getElementById('ms-admin-panel').style.display='none'" style="background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:8px;width:36px;height:36px;color:#e8f0e8;cursor:pointer;font-size:1.1rem">â†</button>
       <div class="admin-title">Admin Panel</div>
       <span style="font-size:0.7rem;color:#6a9a6a">${msUser.full_name}</span>
     </div>
-    <div id="admin-body"><div style="text-align:center;padding:40px;color:#6a9a6a">Loading…</div></div>`;
+    <div id="admin-body"><div style="text-align:center;padding:40px;color:#6a9a6a">Loadingâ€¦</div></div>`;
 
   try {
     const [stats, users] = await Promise.all([
@@ -4655,9 +4669,9 @@ function msAdminBody(stats, users) {
 function msUserRow(u) {
   const hasLic   = u.licence_status === 'active';
   const isSusp   = u.licence_status === 'suspended';
-  const expAt    = u.expires_at ? new Date(u.expires_at*1000).toLocaleDateString('en-ZA') : '—';
+  const expAt    = u.expires_at ? new Date(u.expires_at*1000).toLocaleDateString('en-ZA') : 'â€”';
   const pillCls  = hasLic?'active':isSusp?'suspended':u.licence_status==='expired'?'expired':'none';
-  const pillTxt  = hasLic?u.plan?.toUpperCase()+'  ✓':isSusp?'SUSPENDED':u.licence_status?.toUpperCase()||'NO LICENCE';
+  const pillTxt  = hasLic?u.plan?.toUpperCase()+'  âœ“':isSusp?'SUSPENDED':u.licence_status?.toUpperCase()||'NO LICENCE';
   return `
   <div class="user-row" id="urow-${u.id}">
     <div class="user-row-top">
@@ -4666,8 +4680,8 @@ function msUserRow(u) {
     </div>
     <div style="font-size:0.68rem;color:#5a7a5a;margin-top:4px">
       Expires: ${expAt} &nbsp;|&nbsp; Players: ${u.player_count} &nbsp;|&nbsp; Sessions: ${u.session_count}
-      ${u.has_google ? ' &nbsp;|&nbsp; Google ✓' : ''}
-      ${!u.email_verified ? ' &nbsp;<span style="color:#e88">⚠ Unverified</span>' : ''}
+      ${u.has_google ? ' &nbsp;|&nbsp; Google âœ“' : ''}
+      ${!u.email_verified ? ' &nbsp;<span style="color:#e88">âš  Unverified</span>' : ''}
     </div>
     <div class="user-actions">
       <button class="user-action-btn gold" onclick="msToggleLicForm('${u.id}')">Manage Licence</button>
@@ -4709,7 +4723,7 @@ async function msIssueLic(uid) {
   const notes = document.getElementById('lf-notes-'+uid).value;
   try {
     await msApi('POST', '/admin/users/'+uid+'/licence', { plan, expires_at: expEl||undefined, notes: notes||undefined });
-    alert('Licence issued ✓');
+    alert('Licence issued âœ“');
     msOpenAdmin();
   } catch(e) { alert('Error: '+e.message); }
 }
@@ -4736,7 +4750,7 @@ async function msDeleteUser(uid, email) {
   catch(e) { alert(e.message); }
 }
 
-// ── INIT: check existing session or show auth overlay ────────────────────
+// â”€â”€ INIT: check existing session or show auth overlay â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 (async function msInit() {
   if (msToken && msUser) {
     // Re-validate token with server
@@ -4747,7 +4761,7 @@ async function msDeleteUser(uid, email) {
       localStorage.setItem('ms_lic',  JSON.stringify(licence));
       msBootApp();
     } catch(e) {
-      // Token expired or invalid — show auth
+      // Token expired or invalid â€” show auth
       localStorage.removeItem('ms_token');
       msToken = null;
       document.getElementById('ms-auth-overlay').style.display = 'flex';
@@ -4758,7 +4772,7 @@ async function msDeleteUser(uid, email) {
 })();
 
 
-// ── Push YouTube video ID to server after upload ─────────────────────
+// â”€â”€ Push YouTube video ID to server after upload â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 async function msPushYouTubeId(playerName, sessionIdx, youtubeVideoId) {
   if (!msToken || !msLicence) return;
   try {
@@ -4779,21 +4793,6 @@ window.msApi = msApi;
 window.msUser = () => msUser;
 window.msLogout = msLogout;
 
-</script>
-
-<!-- ═══════════════════════════════════════════════════════════════
-     MASTER STROKE — CONFIGURATION
-     To connect to your backend, edit the two values below.
-     Step 7 of the deployment guide explains exactly what to put here.
-     ═══════════════════════════════════════════════════════════════ -->
-<script>
-  // The URL of your Railway backend (e.g. https://masterstroke-backend.up.railway.app)
-  // Leave blank while running locally without a backend
-  window.MS_API_URL = 'https://masterstroke-backend.up.railway.app';
-
-  // Your Google OAuth Client ID from Google Cloud Console (Step 2.3 of deployment guide)
-  // Looks like: 123456789-abc.apps.googleusercontent.com
-  window.GOOGLE_CLIENT_ID = '272311551918-2gh36ft2s7fbhggerqite5hjbqql62m9.apps.googleusercontent.com';
 </script>
 
 </body>
